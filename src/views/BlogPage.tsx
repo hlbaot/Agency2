@@ -28,8 +28,18 @@ interface BlogPost {
   category: string;
   readTime: string;
   gradient: string;
+  image: string;
   featured?: boolean;
 }
+
+const blogImages = [
+  "https://images.pexels.com/photos/5215008/pexels-photo-5215008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  "https://images.pexels.com/photos/32613937/pexels-photo-32613937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+  "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200",
+];
 
 const blogPosts: BlogPost[] = [
   {
@@ -39,6 +49,7 @@ const blogPosts: BlogPost[] = [
     category: "Insight",
     readTime: "5 phút",
     gradient: gradients[0],
+    image: blogImages[0],
     featured: true,
   },
   {
@@ -48,6 +59,7 @@ const blogPosts: BlogPost[] = [
     category: "Chiến lược",
     readTime: "8 phút",
     gradient: gradients[1],
+    image: blogImages[1],
     featured: true,
   },
   {
@@ -57,6 +69,7 @@ const blogPosts: BlogPost[] = [
     category: "Hướng dẫn",
     readTime: "6 phút",
     gradient: gradients[2],
+    image: blogImages[2],
   },
   {
     id: 4,
@@ -65,6 +78,7 @@ const blogPosts: BlogPost[] = [
     category: "Branding",
     readTime: "7 phút",
     gradient: gradients[3],
+    image: blogImages[3],
   },
   {
     id: 5,
@@ -73,6 +87,7 @@ const blogPosts: BlogPost[] = [
     category: "Insight",
     readTime: "10 phút",
     gradient: gradients[4],
+    image: blogImages[4],
   },
   {
     id: 6,
@@ -81,6 +96,7 @@ const blogPosts: BlogPost[] = [
     category: "Hướng dẫn",
     readTime: "4 phút",
     gradient: gradients[5],
+    image: blogImages[5],
   },
   {
     id: 7,
@@ -89,6 +105,7 @@ const blogPosts: BlogPost[] = [
     category: "Chiến lược",
     readTime: "6 phút",
     gradient: gradients[0],
+    image: blogImages[0],
   },
   {
     id: 8,
@@ -97,6 +114,7 @@ const blogPosts: BlogPost[] = [
     category: "Insight",
     readTime: "8 phút",
     gradient: gradients[1],
+    image: blogImages[1],
   },
   {
     id: 9,
@@ -105,6 +123,7 @@ const blogPosts: BlogPost[] = [
     category: "Branding",
     readTime: "5 phút",
     gradient: gradients[2],
+    image: blogImages[2],
   },
   {
     id: 10,
@@ -113,6 +132,7 @@ const blogPosts: BlogPost[] = [
     category: "Chiến lược",
     readTime: "7 phút",
     gradient: gradients[3],
+    image: blogImages[3],
   },
   {
     id: 11,
@@ -121,6 +141,7 @@ const blogPosts: BlogPost[] = [
     category: "Hướng dẫn",
     readTime: "9 phút",
     gradient: gradients[4],
+    image: blogImages[4],
   },
   {
     id: 12,
@@ -129,6 +150,7 @@ const blogPosts: BlogPost[] = [
     category: "Branding",
     readTime: "6 phút",
     gradient: gradients[5],
+    image: blogImages[5],
   },
 ];
 
@@ -218,8 +240,13 @@ export default function BlogPage() {
                   key={post.id}
                   className="group rounded-3xl overflow-hidden bg-white/[0.03] border border-pink-brand/20 hover:border-pink-brand/40 transition-all duration-300 cursor-pointer"
                 >
-                  <div className={`h-48 bg-gradient-to-br ${post.gradient} relative`}>
-                    <div className="absolute inset-0 bg-black/20" />
+                  <div className="relative h-48 overflow-hidden">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      style={{ backgroundImage: `url('${post.image}')` }}
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-25`} />
+                    <div className="absolute inset-0 bg-black/30" />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold">
                         ⭐ Nổi bật
@@ -272,8 +299,13 @@ export default function BlogPage() {
                     key={post.id}
                     className="group rounded-3xl overflow-hidden bg-white/[0.02] border border-white/5 hover:border-pink-brand/30 transition-all duration-300 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:shadow-pink-brand/5"
                   >
-                    <div className={`h-44 bg-gradient-to-br ${post.gradient} relative overflow-hidden`}>
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition" />
+                    <div className="relative h-44 overflow-hidden">
+                      <div
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                        style={{ backgroundImage: `url('${post.image}')` }}
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-20`} />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition" />
                       <div className="absolute top-4 left-4">
                         <span className="px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-medium">
                           {post.category}
