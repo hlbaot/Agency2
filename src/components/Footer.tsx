@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { MapPin, Phone } from "lucide-react";
+import BrandLogo from "./BrandLogo";
 
 const socialLinks = [
   { label: "TikTok", icon: "♪", href: "#" },
@@ -13,14 +15,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center font-bold text-white text-lg">
-                C
-              </div>
-              <span className="text-white font-bold text-lg">
-                CNA <span className="text-pink-brand">Entertainment</span>
-              </span>
-            </Link>
+            <BrandLogo className="mb-4" />
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Studio TikTok hàng đầu cho thương hiệu Việt. Chúng tôi giúp doanh
               nghiệp xây dựng hệ thống content chuyên nghiệp, chuyển đổi người
@@ -82,14 +77,14 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Liên hệ</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
-                <span className="text-pink-brand mt-0.5">📞</span>
+                <Phone size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 flex-shrink-0" />
                 <div>
                   <p>0523 860 068</p>
                   <p>0888 430 620</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-pink-brand mt-0.5">📍</span>
+                <MapPin size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 flex-shrink-0" />
                 <p>458/64 D. 3 Tháng 2, Quận 10, TP.HCM</p>
               </li>
             </ul>
@@ -99,7 +94,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © 2024 CNA Entertainment. All rights reserved.
+            © 2024 SHORT PRO. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition">

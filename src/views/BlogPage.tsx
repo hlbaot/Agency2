@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, Clock, ChevronRight, ChevronDown } from "lucide-react";
+import { Search, Clock, ChevronRight, ChevronDown, Phone, Zap } from "lucide-react";
 
 const categories = [
   { name: "Tất cả", count: 24 },
@@ -152,10 +152,10 @@ export default function BlogPage() {
   const visiblePosts = filtered.slice(0, visibleCount);
 
   return (
-    <div className="min-h-screen bg-purple-deeper text-white">
+    <div className="light-page min-h-screen bg-white text-slate-900">
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-dark via-purple-deeper to-purple-dark" />
+        <div className="page-hero-bg absolute inset-0" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-pink-brand/10 rounded-full blur-3xl" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
@@ -177,7 +177,7 @@ export default function BlogPage() {
               placeholder="Tìm kiếm bài viết…"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setVisibleCount(9); }}
-              className="w-full pl-14 pr-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-pink-brand/50 focus:ring-2 focus:ring-pink-brand/20 transition-all"
+              className="w-full pl-14 pr-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-slate-900 placeholder-gray-500 focus:outline-none focus:border-pink-brand/50 focus:ring-2 focus:ring-pink-brand/20 transition-all"
             />
           </div>
         </div>
@@ -318,23 +318,48 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative p-12 sm:p-16 rounded-3xl overflow-hidden text-center">
-            <div className="absolute inset-0 gradient-bg opacity-90" />
-            <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
+      <section className="cta-section py-24">
+        <div className="cta-container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="cta-card relative overflow-hidden rounded-[40px] px-6 py-16 text-center sm:px-12 sm:py-20">
+            <div className="cta-background absolute inset-0 bg-[radial-gradient(circle_at_18%_68%,rgba(212,174,104,0.12),transparent_24%),radial-gradient(circle_at_84%_34%,rgba(212,174,104,0.14),transparent_24%)]" />
+            <div className="cta-content relative z-10">
+              <div className="cta-badge-wrap mb-7 flex justify-center">
+                <span className="cta-badge inline-flex items-center gap-2 rounded-full border border-[#C9A163]/35 bg-[#C9A163]/10 px-7 py-3 text-lg font-semibold text-[#C9A163]">
+                  <Zap className="cta-badge-icon h-4 w-4" />
+                  <span className="cta-badge-text">Bắt đầu ngay</span>
+                </span>
+              </div>
+              <h2 className="cta-title mx-auto mb-8 max-w-4xl text-4xl font-black leading-[1.08] text-[#08152f] sm:text-5xl lg:text-6xl">
                 Bạn muốn xây kênh TikTok chuyên nghiệp?
               </h2>
-              <p className="text-white/80 text-lg mb-8">
-                Chúng tôi giúp bạn từ chiến lược đến sản xuất nội dung
+              <p className="cta-description mx-auto mb-12 max-w-[980px] text-xl leading-relaxed text-[#6b7280] sm:text-[1.9rem] sm:leading-[1.45]">
+                Chúng tôi giúp bạn từ chiến lược đến sản xuất nội dung.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-pink-brand px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105"
-              >
-                Nhận tư vấn miễn phí <ChevronRight size={20} />
-              </Link>
+              <div className="cta-actions mb-14 flex flex-wrap justify-center gap-5">
+                <Link
+                  href="/contact"
+                  className="cta-primary-button inline-flex min-w-[260px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-10 py-5 text-xl font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:-translate-y-0.5 hover:bg-[#c79f53]"
+                >
+                  <span className="cta-primary-button-text">Nhận tư vấn miễn phí</span>
+                  <ChevronRight className="cta-primary-button-icon h-5 w-5" />
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="cta-secondary-button inline-flex min-w-[200px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-10 py-5 text-xl font-bold text-[#08152f] transition-all hover:bg-[#f7f9fc]"
+                >
+                  <span className="cta-secondary-button-text">Xem bảng giá</span>
+                </Link>
+              </div>
+              <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-12 gap-y-5 text-[#6b7280]">
+                <div className="cta-contact-item inline-flex items-center gap-3 text-[1.1rem]">
+                  <Phone className="cta-contact-icon h-6 w-6" />
+                  <span className="cta-contact-text">0523 860 068</span>
+                </div>
+                <div className="cta-contact-item inline-flex items-center gap-3 text-[1.1rem]">
+                  <Phone className="cta-contact-icon h-6 w-6" />
+                  <span className="cta-contact-text">0888 430 620</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

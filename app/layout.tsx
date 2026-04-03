@@ -5,8 +5,8 @@ import "../src/index.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "CNA Entertainment",
-    template: "%s | CNA Entertainment",
+    default: "SHORT PRO.",
+    template: "%s | SHORT PRO.",
   },
   description:
     "Studio TikTok cho thương hiệu Viet voi cac goi san xuat, portfolio, blog va thong tin lien he.",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body>
-        <div className="min-h-screen bg-purple-deeper">
+        <div className="min-h-screen bg-white">
           <Header />
           <main>{children}</main>
           <Footer />
