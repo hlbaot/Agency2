@@ -120,28 +120,32 @@ const caseStudies = [
     handle: "@haisandaiduong",
     category: "F&B",
     views: "2.5M",
-    mediaSrc: "/videos/1.mp4",
+    mediaSrc:
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265200/cjk2zm54tiu8g1qekbo3.mp4",
   },
   {
     name: "Spa Bella Beauty",
     handle: "@bellaspa.vn",
     category: "Spa",
     views: "1.8M",
-    mediaSrc: "/videos/11.mp4",
+    mediaSrc:
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265173/wzdmbzpmvjsftgskingc.mp4",
   },
   {
     name: "BĐS Golden Land",
     handle: "@goldenland.vn",
     category: "Bất động sản",
     views: "3.2M",
-    mediaSrc: "/videos/13.mp4",
+    mediaSrc:
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265109/dzegwkkj4g3ivyuzc9ch.mp4",
   },
   {
     name: "Thời trang Moly",
     handle: "@moly.fashion",
     category: "Thời trang",
     views: "4.1M",
-    mediaSrc: "/videos/15.mp4",
+    mediaSrc:
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775264958/ftysptquwv243a4qnic7.mp4",
   },
 ];
 

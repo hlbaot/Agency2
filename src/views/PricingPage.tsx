@@ -387,19 +387,21 @@ export default function PricingPage() {
                       : "border-white/8 bg-[#1c1c1c]"
                   }`}
                 >
-                  <div className="mb-3 flex items-start justify-between gap-3">
-                    <div>
-                      <div className="mb-1.5 flex items-center gap-2">
-                        <h3 className="text-lg font-semibold text-[#F8FAFC] md:text-[1.35rem]">{bundle.name}</h3>
-                        {bundle.popular ? (
-                          <span className="rounded-full bg-[#d4ae68] px-2 py-0.5 text-[10px] font-semibold text-[#08152f]">
-                            ✦ Phổ biến nhất
-                          </span>
-                        ) : null}
-                      </div>
-                      <p className="text-3xl font-black text-[#F2E3BA] md:text-[2.2rem]">{bundle.price}</p>
+                  <div className="mb-3 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
+                    <div className="min-w-0">
+                      <h3 className="min-h-[4.5rem] text-xl font-semibold leading-tight text-[#F8FAFC] md:min-h-[5rem] md:text-[1.35rem]">
+                        {bundle.name}
+                      </h3>
+                      <p className="mt-3 text-3xl font-black leading-none text-[#F2E3BA] md:text-[2.2rem]">{bundle.price}</p>
                     </div>
-                    <span className="rounded bg-white/8 px-2.5 py-1 text-xs text-white/75">{bundle.videos}</span>
+                    <div className="flex flex-row items-start gap-2 md:flex-col md:items-end">
+                      {bundle.popular ? (
+                        <span className="rounded-full bg-[#d4ae68] px-3 py-1 text-[11px] font-semibold text-[#08152f]">
+                          ✦ Phổ biến nhất
+                        </span>
+                      ) : null}
+                      <span className="rounded bg-white/8 px-3 py-1.5 text-xs font-medium text-white/75">{bundle.videos}</span>
+                    </div>
                   </div>
 
                   <button
@@ -472,7 +474,7 @@ export default function PricingPage() {
             <div className="mt-8 flex justify-center">
               <button
                 onClick={() => setShowAllBundles((prev) => !prev)}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-[#d4ae68]/45 bg-[#d4ae68]/12 px-6 py-3 text-sm font-semibold text-[#F2E3BA] transition-all hover:bg-[#d4ae68]/18"
               >
                 {showAllBundles ? "Thu gọn" : "Xem thêm"}
                 <ChevronDown size={16} className={`transition-transform ${showAllBundles ? "rotate-180" : ""}`} />
