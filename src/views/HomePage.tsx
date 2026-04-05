@@ -105,13 +105,13 @@ const trustedProfiles = [
   { src: "/img/trusted-haisan.svg", alt: "Hai San Dai Duong TikTok profile" },
 ];
 
-const heroImages = {
-  consultation:
-    "https://images.pexels.com/photos/5215008/pexels-photo-5215008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=600",
-  showroom:
-    "https://images.pexels.com/photos/32613937/pexels-photo-32613937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=600",
-  fashion:
-    "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=600",
+const heroVideos = {
+  main:
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265200/cjk2zm54tiu8g1qekbo3.mp4",
+  left:
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265173/wzdmbzpmvjsftgskingc.mp4",
+  right:
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265109/dzegwkkj4g3ivyuzc9ch.mp4",
 };
 
 const caseStudies = [
@@ -155,21 +155,21 @@ function HeroVisual() {
       <PhoneMockup
         className="hero-phone hero-phone-main"
         size="lg"
-        variant="image"
-        mediaSrc={heroImages.showroom}
+        variant="video"
+        mediaSrc={heroVideos.main}
         showPlay
       />
       <PhoneMockup
         className="hero-phone hero-phone-front-left"
         size="sm"
-        variant="image"
-        mediaSrc={heroImages.consultation}
+        variant="video"
+        mediaSrc={heroVideos.left}
       />
       <PhoneMockup
         className="hero-phone hero-phone-right"
         size="sm"
-        variant="image"
-        mediaSrc={heroImages.fashion}
+        variant="video"
+        mediaSrc={heroVideos.right}
       />
 
       <div className="hero-badge hero-badge-heart animate-float flex h-14 w-14 items-center justify-center rounded-full bg-white text-lg shadow-[0_10px_26px_rgba(0,0,0,0.12)]">
@@ -208,7 +208,7 @@ function PhoneMockup({
 }: {
   size?: "xs" | "sm" | "md" | "lg";
   showPlay?: boolean;
-  variant?: "conversation" | "showroom" | "fashion" | "product" | "image";
+  variant?: "conversation" | "showroom" | "fashion" | "product" | "image" | "video";
   className?: string;
   mediaSrc?: string;
 }) {
@@ -252,6 +252,35 @@ function PhoneMockup({
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${mediaSrc}')` }}
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.06)_38%,rgba(0,0,0,0.16)_100%)]" />
+          </>
+        )}
+
+        {variant === "video" && mediaSrc && (
+          <>
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              src={mediaSrc}
+              muted
+              playsInline
+              preload="metadata"
+              ref={(node) => {
+                if (!node) return;
+                node.pause();
+                if (node.readyState >= 2) {
+                  try {
+                    node.currentTime = 0.01;
+                  } catch {}
+                }
+              }}
+              onLoadedData={(event) => {
+                const video = event.currentTarget;
+                video.pause();
+                try {
+                  video.currentTime = 0.01;
+                } catch {}
+              }}
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.06)_38%,rgba(0,0,0,0.16)_100%)]" />
           </>
