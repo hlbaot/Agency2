@@ -99,10 +99,12 @@ const comparison = [
 ];
 
 const trustedProfiles = [
-  { src: "/img/trusted-baoviet.svg", alt: "Bao Viet Dental TikTok profile" },
-  { src: "/img/trusted-cuongkido.svg", alt: "Cuong Kido TikTok profile" },
-  { src: "/img/trusted-ngado.svg", alt: "Ngado TikTok profile" },
-  { src: "/img/trusted-haisan.svg", alt: "Hai San Dai Duong TikTok profile" },
+  { src: "/img/tik1.png", alt: "TikTok profile 1" },
+  { src: "/img/tik2.png", alt: "TikTok profile 2" },
+  { src: "/img/tik3.png", alt: "TikTok profile 3" },
+  { src: "/img/tik4.png", alt: "TikTok profile 4" },
+  { src: "/img/tik5.png", alt: "TikTok profile 5" },
+  { src: "/img/tik6.png", alt: "TikTok profile 6" },
 ];
 
 const heroVideos = {
