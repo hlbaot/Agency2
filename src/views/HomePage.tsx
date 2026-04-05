@@ -387,7 +387,7 @@ export default function HomePage() {
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#fbfcff] text-[#08152f]">
+      <section className="relative min-h-screen overflow-hidden bg-[#fbfcff] text-[#08152f]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_45%,rgba(15,42,86,0.42)_0%,rgba(15,42,86,0.32)_16%,rgba(15,42,86,0.22)_30%,rgba(15,42,86,0.12)_46%,rgba(255,255,255,0)_68%),linear-gradient(180deg,#ffffff_0%,#f5f8ff_40%,#ffffff_100%)]" />
         <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(39,77,132,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(39,77,132,0.05)_1px,transparent_1px)] [background-size:18px_18px]" />
         <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4f73ad]/18 blur-3xl" />
@@ -395,8 +395,8 @@ export default function HomePage() {
         <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#173460]/20 blur-3xl" />
         <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#173460]/18 blur-3xl" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-20 pt-28 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+          <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
             <div className="flex flex-col items-start">
               <div className="mb-6 animate-fade-in-up">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#C9A163]/50 bg-white/70 px-[18px] py-2 text-[13px] font-bold tracking-[0.01em] text-[#b88f4f] backdrop-blur-sm">
