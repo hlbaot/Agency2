@@ -318,6 +318,14 @@ export default function PricingPage() {
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#6b7280]">
               Chúng tôi đầu tư vào thiết bị chuẩn production được dùng trong quảng cáo thương mại. Để mỗi frame hình nâng tầm thương hiệu của bạn.
             </p>
+            <a
+              href="/ShortPro-optimized.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center rounded-full bg-[#0a1f44] px-6 py-3 text-sm font-bold text-[#c9a163] transition-all hover:cursor-pointer hover:bg-[#102a5c]"
+            >
+              More
+            </a>
           </div>
         </div>
       </section>
