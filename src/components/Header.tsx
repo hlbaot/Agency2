@@ -11,6 +11,7 @@ const navItems = [
   { label: "Báo giá", href: "/pricing" },
   { label: "Dự án", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
+  { label: "Livestream", href: "/livestream" },
   { label: "Liên hệ", href: "/contact" },
 ];
 

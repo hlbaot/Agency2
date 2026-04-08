@@ -82,11 +82,11 @@ export default function CTASection({
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
               <div className="inline-flex items-center gap-3 text-base sm:text-lg">
                 <Phone className="h-5 w-5" />
-                <span>0523 860 068</span>
+                <span>0906 914 696</span>
               </div>
               <div className="inline-flex items-center gap-3 text-base sm:text-lg">
                 <Phone className="h-5 w-5" />
-                <span>0888 430 620</span>
+                <span>0935 357 656</span>
               </div>
             </div>
           </div>

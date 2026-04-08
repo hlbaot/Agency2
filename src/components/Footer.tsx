@@ -58,6 +58,7 @@ export default function Footer() {
                 { label: "Báo giá", to: "/pricing" },
                 { label: "Dự án", to: "/portfolio" },
                 { label: "Blog", to: "/blog" },
+                { label: "Livestream", to: "/livestream" },
                 { label: "Liên hệ", to: "/contact" },
               ].map((item) => (
                 <li key={item.to}>
@@ -79,8 +80,8 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <Phone size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 flex-shrink-0" />
                 <div>
-                  <p>0523 860 068</p>
-                  <p>0888 430 620</p>
+                  <p>0906 914 696</p>
+                  <p>0935 357 656</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">

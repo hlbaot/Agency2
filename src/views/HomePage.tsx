@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { value: "100+", label: "Video được tạo ra", color: "#C9A163" },
+  { value: "1000+", label: "Video được tạo ra", color: "#C9A163" },
   { value: "50+", label: "Khách hàng tin dùng", color: "#C9A163" },
   { value: "10M+", label: "Views Tiktok", color: "#C9A163" },
 ];
@@ -388,12 +388,12 @@ export default function HomePage() {
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/* Hero */}
       <section className="relative min-h-screen overflow-hidden bg-[#fbfcff] text-[#08152f]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_45%,rgba(15,42,86,0.42)_0%,rgba(15,42,86,0.32)_16%,rgba(15,42,86,0.22)_30%,rgba(15,42,86,0.12)_46%,rgba(255,255,255,0)_68%),linear-gradient(180deg,#ffffff_0%,#f5f8ff_40%,#ffffff_100%)]" />
-        <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(39,77,132,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(39,77,132,0.05)_1px,transparent_1px)] [background-size:18px_18px]" />
-        <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4f73ad]/18 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-[26rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#173460]/14 blur-3xl" />
-        <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#173460]/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#173460]/18 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_45%,rgba(15,42,86,0.24)_0%,rgba(15,42,86,0.16)_16%,rgba(15,42,86,0.1)_30%,rgba(15,42,86,0.05)_46%,rgba(255,255,255,0)_68%),linear-gradient(180deg,#ffffff_0%,#f8fbff_40%,#ffffff_100%)]" />
+        <div className="absolute inset-0 opacity-22 [background-image:linear-gradient(rgba(39,77,132,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(39,77,132,0.03)_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4f73ad]/8 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-[26rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#173460]/7 blur-3xl" />
+        <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#173460]/8 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#173460]/7 blur-3xl" />
 
         <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
           <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
@@ -409,11 +409,11 @@ export default function HomePage() {
                 <span className="block text-[#08152f]">Thương hiệu không</span>
                 <span className="block">
                   <span className="text-[#08152f]">thắng nhờ 1 cú viral - </span>
-                  <span className="bg-[linear-gradient(135deg,#F2E3BA_0%,#C9A163_100%)] bg-clip-text text-transparent">
+                  <span className="bg-[linear-gradient(135deg,#d8b167_0%,#b8862b_100%)] bg-clip-text text-transparent">
                     Đó
                   </span>
                 </span>
-                <span className="block bg-[linear-gradient(135deg,#F2E3BA_0%,#C9A163_100%)] bg-clip-text text-transparent">
+                <span className="block bg-[linear-gradient(135deg,#d8b167_0%,#b8862b_100%)] bg-clip-text text-transparent">
                   là kết quả của chiến lược
                 </span>
               </h1>
@@ -718,11 +718,11 @@ export default function HomePage() {
               <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0523 860 068</span>
+                  <span className="cta-contact-text">0906 914 696</span>
                 </div>
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0888 430 620</span>
+                  <span className="cta-contact-text">0935 357 656</span>
                 </div>
               </div>
             </div>

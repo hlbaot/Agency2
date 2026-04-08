@@ -297,6 +297,7 @@ export default function PricingPage() {
   const [showAllBundles, setShowAllBundles] = useState(false);
   const currentPlan = pricingPlans[activePlan];
   const visibleBundles = showAllBundles ? bundles : bundles.slice(0, 4);
+  const isPremiumPlan = activePlan === "cao-cap";
 
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
@@ -318,14 +319,6 @@ export default function PricingPage() {
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#6b7280]">
               Chúng tôi đầu tư vào thiết bị chuẩn production được dùng trong quảng cáo thương mại. Để mỗi frame hình nâng tầm thương hiệu của bạn.
             </p>
-            <a
-              href="/ShortPro-optimized.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center rounded-full bg-[#0a1f44] px-6 py-3 text-sm font-bold text-[#c9a163] transition-all hover:cursor-pointer hover:bg-[#102a5c]"
-            >
-              More
-            </a>
           </div>
         </div>
       </section>
@@ -357,47 +350,72 @@ export default function PricingPage() {
             </Link>
           </div>
 
-          <div className="mb-6 rounded-[28px] border border-[#d7e3f6] bg-[linear-gradient(180deg,#f4f8ff_0%,#edf4ff_100%)] p-6 shadow-[0_16px_36px_rgba(31,79,149,0.08)] md:p-9">
-            <div className="mb-6 inline-flex rounded-full border border-[#c8d8f0] bg-white px-6 py-2 text-sm font-bold text-[#1f4f95] shadow-sm">
+          <div
+            className={`relative mb-6 rounded-[28px] px-5 pb-6 pt-9 shadow-[0_12px_28px_rgba(31,79,149,0.06)] md:px-8 md:pb-7 md:pt-10 ${
+              isPremiumPlan
+                ? "border border-[#d9bd79] bg-[#fff4dc]"
+                : "border border-[#bfe2ef] bg-[#eaf8fd]"
+            }`}
+          >
+            <div
+              className={`absolute left-6 top-0 -translate-y-1/2 inline-flex rounded-full bg-white px-6 py-2 text-sm font-bold shadow-sm ${
+                isPremiumPlan
+                  ? "border border-[#d4ae68] text-[#b8862b]"
+                  : "border border-[#9bd7ea] text-[#1497b8]"
+              }`}
+            >
               {activePlan === "cao-cap" ? "Gói Cao Cấp" : "Gói Chuyên Nghiệp"}
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
               <div>
-                <div className="mb-5 flex items-center gap-3">
-                  <div className="rounded-2xl bg-white p-3 text-[#d4ae68] shadow-sm">
-                    <Camera size={20} />
+                <div className="mb-3 flex items-center gap-3">
+                  <div
+                    className={`rounded-2xl bg-white p-2 shadow-sm ${
+                      isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"
+                    }`}
+                  >
+                    <Camera size={18} />
                   </div>
-                  <h2 className={`text-2xl font-black ${currentPlan.accent}`}>{currentPlan.title}</h2>
+                  <h2 className="text-[1.65rem] font-black text-[#111827]">
+                    {activePlan === "cao-cap"
+                      ? "Video cao cấp, hình ảnh đẹp, âm thanh rõ ràng"
+                      : "Video sắc nét, bố cục chỉn chu, âm thanh rõ ràng"}
+                  </h2>
                 </div>
 
-                <p className="mb-3 text-[1.05rem] font-semibold leading-relaxed text-[#1f2937]">
-                  {currentPlan.subtitle}
-                </p>
-                <p className="mb-8 text-lg text-[#6b7280]">
+                <p className="mb-5 text-[0.95rem] leading-relaxed text-[#5b6778]">
                   {activePlan === "cao-cap"
                     ? "Phù hợp cho các kênh cần xây dựng hình ảnh cao cấp"
                     : "Phù hợp cho các kênh xây dựng hình ảnh chuyên nghiệp, uy tín"}
                 </p>
 
-                <p className="mb-4 text-[1.7rem] font-black text-[#111827]">{currentPlan.includesTitle}:</p>
-                <ul className="space-y-3">
+                <p className="mb-2.5 text-[1rem] font-black text-[#111827]">{currentPlan.includesTitle}:</p>
+                <ul className="space-y-2">
                   {currentPlan.includes.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#4b5563]">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#1f4f95]" />
-                      <span className="text-[1.05rem] leading-8">{item}</span>
+                      <span
+                        className={`mt-[0.55rem] h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                          isPremiumPlan ? "bg-[#c3922e]" : "bg-[#1497b8]"
+                        }`}
+                      />
+                      <span className="text-[0.92rem] leading-6">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <p className="mb-4 text-[1.7rem] font-black text-[#111827]">{currentPlan.detailTitle} thiết bị:</p>
-                <ul className="space-y-3">
+                <p className="mb-2.5 text-[1rem] font-black text-[#111827]">{currentPlan.detailTitle} thiết bị:</p>
+                <ul className="space-y-2">
                   {currentPlan.details.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#4b5563]">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#1f4f95]" />
-                      <span className="text-[1.05rem] leading-8">{item}</span>
+                      <span
+                        className={`mt-[0.55rem] h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                          isPremiumPlan ? "bg-[#c3922e]" : "bg-[#1497b8]"
+                        }`}
+                      />
+                      <span className="text-[0.92rem] leading-6">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -405,25 +423,38 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[28px] border border-[#d7e3f6] bg-white shadow-[0_18px_42px_rgba(8,21,47,0.08)]">
-            <div className="grid grid-cols-5 bg-[linear-gradient(180deg,#eff5ff_0%,#e5eefc_100%)] px-4 py-3 text-[11px] font-bold text-[#1f2937] md:text-sm">
-              <span className="inline-flex items-center gap-2"><Video size={18} className="text-[#1f4f95]" />Số lượng Video</span>
-              <span className="inline-flex items-center gap-2"><UserCheck size={18} className="text-[#1f4f95]" />Có diễn viên</span>
-              <span className="inline-flex items-center gap-2"><UserX size={18} className="text-[#1f4f95]" />Không diễn viên</span>
-              <span className="inline-flex items-center gap-2"><Clock3 size={18} className="text-[#1f4f95]" />Thời gian quay</span>
-              <span className="inline-flex items-center gap-2"><CalendarDays size={18} className="text-[#1f4f95]" />Dự kiến hoàn thành</span>
+          <div
+            className={`overflow-hidden rounded-[28px] bg-white shadow-[0_18px_42px_rgba(8,21,47,0.08)] ${
+              isPremiumPlan ? "border border-[#d9bd79]" : "border border-[#bfe2ef]"
+            }`}
+          >
+            <div
+              className={`grid grid-cols-5 px-5 py-4 text-sm font-bold text-[#1f2937] ${
+                isPremiumPlan ? "bg-[#fff4dc]" : "bg-[#eaf8fd]"
+              }`}
+            >
+              <span className="inline-flex items-center gap-2"><Video size={18} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />Số lượng Video</span>
+              <span className="inline-flex items-center gap-2"><UserCheck size={18} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />Có diễn viên</span>
+              <span className="inline-flex items-center gap-2"><UserX size={18} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />Không diễn viên</span>
+              <span className="inline-flex items-center gap-2"><Clock3 size={18} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />Thời gian quay</span>
+              <span className="inline-flex items-center gap-2"><CalendarDays size={18} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />Dự kiến hoàn thành</span>
             </div>
 
             {currentPlan.rows.map((row) => (
-              <div key={row.qty} className="grid grid-cols-5 border-t border-[#e1eaf8] px-4 py-4 text-[11px] md:text-sm">
-                <span className="font-semibold text-[#6b7280]">
-                  <span className="mr-1.5 text-[1.35rem] font-black text-[#1f4f95] md:text-[1.55rem]">{row.qty}</span>
+              <div
+                key={row.qty}
+                className={`grid grid-cols-5 px-5 py-5 text-sm ${
+                  isPremiumPlan ? "border-t border-[#ead8aa]" : "border-t border-[#bfe2ef]"
+                }`}
+              >
+                <span className="font-medium text-[#6b7280]">
+                  <span className={`mr-1.5 text-[0.98rem] font-black ${isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"}`}>{row.qty}</span>
                   videos
                 </span>
-                <span className="font-bold text-[#111827]">{row.withActor}đ</span>
-                <span className="font-bold text-[#111827]">{row.withoutActor}đ</span>
-                <span className="text-[#4b5563]">{row.duration}</span>
-                <span className="text-[#4b5563]">{row.completion}</span>
+                <span className="text-[0.98rem] font-bold text-[#111827]">{row.withActor}đ</span>
+                <span className="text-[0.98rem] font-bold text-[#111827]">{row.withoutActor}đ</span>
+                <span className="text-[0.96rem] text-[#4b5563]">{row.duration}</span>
+                <span className="text-[0.96rem] text-[#4b5563]">{row.completion}</span>
               </div>
             ))}
           </div>
@@ -829,7 +860,7 @@ export default function PricingPage() {
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>
-                <a href="tel:0523860068" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
+                <a href="tel:0906914696" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
                   <Phone className="cta-secondary-button-icon h-5 w-5" />
                   <span className="cta-secondary-button-text">Gọi ngay</span>
                 </a>
@@ -837,11 +868,11 @@ export default function PricingPage() {
               <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0523 860 068</span>
+                  <span className="cta-contact-text">0906 914 696</span>
                 </div>
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0888 430 620</span>
+                  <span className="cta-contact-text">0935 357 656</span>
                 </div>
               </div>
             </div>

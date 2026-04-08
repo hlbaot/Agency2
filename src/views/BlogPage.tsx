@@ -1,9 +1,5 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import Link from "next/link";
-import { Search, Clock, ChevronRight, ChevronDown, Phone, Zap } from "lucide-react";
-
 const categories = [
   { name: "Tất cả", count: 24 },
   { name: "Insight", count: 8 },
@@ -155,247 +151,33 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Tất cả");
-  const [visibleCount, setVisibleCount] = useState(9);
-
-  const filtered = useMemo(() => {
-    return blogPosts.filter((post) => {
-      const catMatch = selectedCategory === "Tất cả" || post.category === selectedCategory;
-      const searchMatch =
-        searchQuery === "" ||
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return catMatch && searchMatch;
-    });
-  }, [selectedCategory, searchQuery]);
-
-  const featuredPosts = blogPosts.filter((p) => p.featured);
-  const visiblePosts = filtered.slice(0, visibleCount);
+  const hiddenBlogArchive = {
+    categories,
+    blogPosts,
+  };
 
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="page-hero-bg absolute inset-0" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-pink-brand/10 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
-            Blog <span className="gradient-text">TikTok Marketing</span>
-          </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Chia sẻ chiến lược, insight và kinh nghiệm giúp doanh nghiệp phát triển kênh TikTok hiệu quả
-          </p>
-        </div>
-      </section>
-
-      {/* Search */}
-      <section className="pb-8">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative">
-            <Search size={20} className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" />
-            <input
-              type="text"
-              placeholder="Tìm kiếm bài viết…"
-              value={searchQuery}
-              onChange={(e) => { setSearchQuery(e.target.value); setVisibleCount(9); }}
-              className="w-full pl-14 pr-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-slate-900 placeholder-gray-500 focus:outline-none focus:border-pink-brand/50 focus:ring-2 focus:ring-pink-brand/20 transition-all"
+      {/* Trang blog hiện chỉ hiển thị một khung PDF cố định để người dùng cuộn slide ngay trong khung */}
+      <section className="px-4 pb-8 pt-28 sm:px-6 lg:px-8 lg:pb-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="overflow-hidden rounded-[28px] border border-[#dbe6f5] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+            <iframe
+              title="ShortPro PDF Preview"
+              src="/ShortPro-optimized.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+              className="h-[calc(100vh-8.5rem)] min-h-[620px] w-full sm:h-[calc(100vh-9rem)] lg:h-[calc(100vh-9.5rem)]"
+              scrolling="yes"
             />
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat.name}
-                onClick={() => { setSelectedCategory(cat.name); setVisibleCount(9); }}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                  selectedCategory === cat.name
-                    ? "gradient-bg text-white shadow-lg"
-                    : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/5"
-                }`}
-              >
-                {cat.name}
-                <span className="ml-2 text-xs opacity-60">({cat.count})</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Posts */}
-      {selectedCategory === "Tất cả" && searchQuery === "" && (
-        <section className="pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold mb-8">
-              📌 Bài viết <span className="gradient-text">phổ biến</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {featuredPosts.map((post) => (
-                <div
-                  key={post.id}
-                  className="group rounded-3xl overflow-hidden bg-white/[0.03] border border-pink-brand/20 hover:border-pink-brand/40 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                      style={{ backgroundImage: `url('${post.image}')` }}
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-25`} />
-                    <div className="absolute inset-0 bg-black/30" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold">
-                        ⭐ Nổi bật
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <span className="inline-block px-3 py-1 rounded-full bg-pink-brand/10 text-pink-brand text-xs font-medium mb-3">
-                      {post.category}
-                    </span>
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-pink-brand transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
-                      {post.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-gray-500 text-sm">
-                        <Clock size={14} />
-                        <span>{post.readTime}</span>
-                      </div>
-                      <span className="text-pink-brand text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Đọc thêm <ChevronRight size={14} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Blog Grid */}
-      <section className="pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8">
-            {selectedCategory === "Tất cả" ? "Tất cả bài viết" : selectedCategory}
-          </h2>
-
-          {visiblePosts.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">Không tìm thấy bài viết nào</p>
-            </div>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {visiblePosts.map((post) => (
-                  <article
-                    key={post.id}
-                    className="group rounded-3xl overflow-hidden bg-white/[0.02] border border-white/5 hover:border-pink-brand/30 transition-all duration-300 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:shadow-pink-brand/5"
-                  >
-                    <div className="relative h-44 overflow-hidden">
-                      <div
-                        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                        style={{ backgroundImage: `url('${post.image}')` }}
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-20`} />
-                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition" />
-                      <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-medium">
-                          {post.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold mb-3 group-hover:text-pink-brand transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
-                        {post.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-gray-500 text-sm">
-                          <Clock size={14} />
-                          <span>{post.readTime}</span>
-                        </div>
-                        <span className="text-pink-brand text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                          Đọc thêm <ChevronRight size={14} />
-                        </span>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-
-              {visibleCount < filtered.length && (
-                <div className="text-center mt-12">
-                  <button
-                    onClick={() => setVisibleCount((v) => v + 9)}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold transition-all hover:cursor-pointer hover:bg-white/5"
-                  >
-                    Xem thêm bài viết
-                    <ChevronDown size={20} />
-                  </button>
-                </div>
-              )}
-            </>
-          )}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-section py-24">
-        <div className="cta-container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="cta-card relative overflow-hidden rounded-[40px] px-5 py-12 text-center sm:px-8 sm:py-14">
-            <div className="cta-background absolute inset-0 bg-[radial-gradient(circle_at_18%_68%,rgba(212,174,104,0.12),transparent_24%),radial-gradient(circle_at_84%_34%,rgba(212,174,104,0.14),transparent_24%)]" />
-            <div className="cta-content relative z-10">
-              <div className="cta-badge-wrap mb-6 flex justify-center">
-                <span className="cta-badge inline-flex items-center gap-2 rounded-full border border-[#C9A163]/35 bg-[#C9A163]/10 px-5 py-2.5 text-base font-semibold text-[#C9A163]">
-                  <Zap className="cta-badge-icon h-4 w-4" />
-                  <span className="cta-badge-text">Bắt đầu ngay</span>
-                </span>
-              </div>
-              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
-                Bạn muốn xây kênh TikTok chuyên nghiệp?
-              </h2>
-              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
-                Chúng tôi giúp bạn từ chiến lược đến sản xuất nội dung.
-              </p>
-              <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#c79f53]"
-                >
-                  <span className="cta-primary-button-text">Nhận tư vấn miễn phí</span>
-                  <ChevronRight className="cta-primary-button-icon h-5 w-5" />
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
-                >
-                  <span className="cta-secondary-button-text">Xem bảng giá</span>
-                </Link>
-              </div>
-              <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
-                <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
-                  <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0523 860 068</span>
-                </div>
-                <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
-                  <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0888 430 620</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Nội dung blog cũ đang được giữ lại trong code nhưng tạm ẩn theo yêu cầu */}
+      <div
+        className="hidden"
+        data-hidden-blog-posts={hiddenBlogArchive.blogPosts.length}
+        data-hidden-blog-categories={hiddenBlogArchive.categories.length}
+      />
     </div>
   );
 }

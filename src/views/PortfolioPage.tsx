@@ -43,6 +43,15 @@ const portfolioVideos = [
   "https://res.cloudinary.com/djpujlimr/video/upload/v1775264778/mqgks9pzofrd4w8k6req.mp4",
   "https://res.cloudinary.com/djpujlimr/video/upload/v1775264774/pao3ko0cayjmifmxihrv.mp4",
   "https://res.cloudinary.com/djpujlimr/video/upload/v1775264754/h7zr9zu9amegg0vdkro5.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569232/ny9whcrrmikrshd9uwjb.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569323/huphfbgefuytv2ctwggi.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569407/ypb8azc5btrdvzqykcyx.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569465/zu6gvusf6smlo1znfxuo.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569492/ssmutdjta1ax1pvjpvfu.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569593/qedqgxig1mv64feiuaj7.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569614/ksvjzjlmd7fxhvsxnu8h.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569664/ykkvdvirnm1v00xsc0vw.mp4",
+  "https://res.cloudinary.com/djpujlimr/video/upload/v1775569747/ifnpan3xwnijx6jro7ns.mp4",
 ];
 
 interface Project {
@@ -57,6 +66,15 @@ interface Project {
 }
 
 const allProjects: Project[] = [
+  { id: 19, title: "Review menu quán mới", category: "F&B", packageType: "Gói Chuyên Nghiệp", views: "2.7M", handle: "@foodreviewvn", colorIdx: 2, videoSrc: portfolioVideos[21] },
+  { id: 20, title: "Spa treatment thực tế", category: "Spa - Thẩm Mỹ", packageType: "Gói Cao Cấp", views: "3.1M", handle: "@glowspacare", colorIdx: 3, videoSrc: portfolioVideos[22] },
+  { id: 21, title: "Review căn hộ bàn giao", category: "Bất động sản", packageType: "Gói Cao Cấp", views: "4.6M", handle: "@urbanhomevn", colorIdx: 4, videoSrc: portfolioVideos[23] },
+  { id: 22, title: "Mix đồ outfit mùa hè", category: "Thời trang", packageType: "Gói Chuyên Nghiệp", views: "3.9M", handle: "@closet.daily", colorIdx: 5, videoSrc: portfolioVideos[24] },
+  { id: 23, title: "Test máy quay thực chiến", category: "Thiết bị", packageType: "Gói Cao Cấp", views: "2.2M", handle: "@gearhub.vn", colorIdx: 6, videoSrc: portfolioVideos[25] },
+  { id: 24, title: "Case niềng răng thực tế", category: "Nha khoa", packageType: "Gói Chuyên Nghiệp", views: "2.9M", handle: "@dentalsmile.vn", colorIdx: 7, videoSrc: portfolioVideos[26] },
+  { id: 25, title: "Routine skincare ban đêm", category: "Beauty", packageType: "Gói Cao Cấp", views: "4.4M", handle: "@beautylab.vn", colorIdx: 0, videoSrc: portfolioVideos[27] },
+  { id: 26, title: "Kịch bản chốt đơn ngắn", category: "Bán hàng", packageType: "Gói Chuyên Nghiệp", views: "5.1M", handle: "@salesboost.vn", colorIdx: 1, videoSrc: portfolioVideos[28] },
+  { id: 27, title: "Chuyên gia chia sẻ nhanh", category: "Chuyên gia", packageType: "Gói Cao Cấp", views: "3.3M", handle: "@expert.corner", colorIdx: 2, videoSrc: portfolioVideos[29] },
   { id: 1, title: "Review nhà hàng Hải Sản", category: "F&B", packageType: "Gói Cao Cấp", views: "2.5M", handle: "@haisandaiduong", colorIdx: 0, videoSrc: portfolioVideos[0] },
   { id: 2, title: "Spa trải nghiệm chăm sóc da", category: "Spa - Thẩm Mỹ", packageType: "Gói Cao Cấp", views: "1.8M", handle: "@bellaspa.vn", colorIdx: 1, videoSrc: portfolioVideos[1] },
   { id: 3, title: "Tour thực tế căn hộ", category: "Bất động sản", packageType: "Gói Chuyên Nghiệp", views: "3.2M", handle: "@goldenland", colorIdx: 2, videoSrc: portfolioVideos[2] },
@@ -75,13 +93,16 @@ const allProjects: Project[] = [
   { id: 16, title: "Review son môi top seller", category: "Beauty", packageType: "Gói Chuyên Nghiệp", views: "4.3M", handle: "@lipqueen", colorIdx: 7, videoSrc: portfolioVideos[15] },
   { id: 17, title: "Đồ ăn đường phố Sài Gòn", category: "Vlog - Review", packageType: "Gói Cao Cấp", views: "8.9M", handle: "@saigonfood", colorIdx: 0, videoSrc: portfolioVideos[16] },
   { id: 18, title: "Tutorial makeup tự nhiên", category: "Hướng dẫn", packageType: "Gói Cao Cấp", views: "3.7M", handle: "@makeuptips", colorIdx: 1, videoSrc: portfolioVideos[17] },
+  { id: 28, title: "Review quán ăn đêm", category: "Vlog - Review", packageType: "Gói Chuyên Nghiệp", views: "2.6M", handle: "@nightfoodvn", colorIdx: 3, videoSrc: portfolioVideos[18] },
+  { id: 29, title: "Hướng dẫn set up studio", category: "Hướng dẫn", packageType: "Gói Cao Cấp", views: "3.5M", handle: "@creator.setup", colorIdx: 4, videoSrc: portfolioVideos[19] },
+  { id: 30, title: "Review món hot trending", category: "F&B", packageType: "Gói Cao Cấp", views: "6.4M", handle: "@foodtrend.vn", colorIdx: 5, videoSrc: portfolioVideos[20] },
 ];
 
 export default function PortfolioPage() {
   const [selectedPackage, setSelectedPackage] = useState("Tất cả");
   const [selectedCategory, setSelectedCategory] = useState("Tất cả");
   const [showMoreCats, setShowMoreCats] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const filtered = useMemo(() => {
     return allProjects.filter((p) => {
@@ -122,7 +143,7 @@ export default function PortfolioPage() {
             {packageFilters.map((f) => (
               <button
                 key={f}
-                onClick={() => { setSelectedPackage(f); setVisibleCount(12); }}
+                onClick={() => { setSelectedPackage(f); setVisibleCount(8); }}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   selectedPackage === f
                     ? "gradient-bg text-white shadow-lg"
@@ -139,7 +160,7 @@ export default function PortfolioPage() {
             {displayedCats.map((f) => (
               <button
                 key={f}
-                onClick={() => { setSelectedCategory(f); setVisibleCount(12); }}
+                onClick={() => { setSelectedCategory(f); setVisibleCount(8); }}
                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
                   selectedCategory === f
                     ? "bg-pink-brand/20 text-pink-brand border border-pink-brand/30"
@@ -273,11 +294,11 @@ export default function PortfolioPage() {
               <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0523 860 068</span>
+                  <span className="cta-contact-text">0906 914 696</span>
                 </div>
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0888 430 620</span>
+                  <span className="cta-contact-text">0935 357 656</span>
                 </div>
               </div>
             </div>

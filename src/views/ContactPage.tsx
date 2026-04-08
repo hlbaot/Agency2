@@ -1,7 +1,12 @@
 // Contact Page
-import { Phone, MessageCircle, MapPin, Clock, ExternalLink, ChevronRight, Zap } from "lucide-react";
+"use client";
+
+import { Phone, MessageCircle, MapPin, Clock, ExternalLink, ChevronRight, Zap, FileText } from "lucide-react";
 
 export default function ContactPage() {
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/1bKT7WvVRbENBcWpjrtBC915LAsehIiSFtaUWwdYs1t0/viewform";
+
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/* Hero */}
@@ -22,9 +27,20 @@ export default function ContactPage() {
       {/* Response Time */}
       <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
-            <Clock size={18} />
-            <span className="font-medium text-sm">Chúng tôi phản hồi trong vòng 24h làm việc</span>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="inline-flex items-center gap-3 rounded-full border border-green-500/20 bg-green-500/10 px-6 py-3 text-green-400">
+              <Clock size={18} />
+              <span className="font-medium text-sm">Chúng tôi phản hồi trong vòng 24h làm việc</span>
+            </div>
+            <a
+              href={googleFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-[#0a1f44] px-6 py-3 text-sm font-bold text-[#d4ae68] shadow-[0_14px_30px_rgba(10,31,68,0.2)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#102b5e]"
+            >
+              <FileText className="h-4 w-4" />
+              Mở form tư vấn
+            </a>
           </div>
         </div>
       </section>
@@ -39,25 +55,25 @@ export default function ContactPage() {
                 <Phone size={24} />
               </div>
               <h3 className="text-xl font-bold mb-1">Số điện thoại</h3>
-              <p className="text-gray-500 text-sm mb-6">Anh Nam</p>
+              <p className="text-gray-500 text-sm mb-6">Anh Thọ & Anh Trị</p>
               <div className="space-y-4">
                 <a
-                  href="tel:0523860068"
+                  href="tel:0906914696"
                   className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-pink-brand" />
-                    <span className="text-white font-medium">0523 860 068</span>
+                    <span className="text-white font-medium">0906 914 696</span>
                   </div>
                   <ExternalLink size={16} className="text-gray-500 group-hover/link:text-pink-brand transition" />
                 </a>
                 <a
-                  href="tel:0888430620"
+                  href="tel:0935357656"
                   className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-pink-brand" />
-                    <span className="text-white font-medium">0888 430 620</span>
+                    <span className="text-white font-medium">0935 357 656</span>
                   </div>
                   <ExternalLink size={16} className="text-gray-500 group-hover/link:text-pink-brand transition" />
                 </a>
@@ -70,29 +86,29 @@ export default function ContactPage() {
                 <MessageCircle size={24} />
               </div>
               <h3 className="text-xl font-bold mb-1">Zalo</h3>
-              <p className="text-gray-500 text-sm mb-6">Anh Nam</p>
+              <p className="text-gray-500 text-sm mb-6">Anh Thọ & Anh Trị</p>
               <div className="space-y-4">
                 <a
-                  href="https://zalo.me/0523860068"
+                  href="https://zalo.me/0906914696"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-blue-400/30 hover:bg-blue-500/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <MessageCircle size={18} className="text-blue-400" />
-                    <span className="text-white font-medium">0523 860 068</span>
+                    <span className="text-white font-medium">0906 914 696</span>
                   </div>
                   <ExternalLink size={16} className="text-gray-500 group-hover/link:text-blue-400 transition" />
                 </a>
                 <a
-                  href="https://zalo.me/0888430620"
+                  href="https://zalo.me/0935357656"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-blue-400/30 hover:bg-blue-500/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <MessageCircle size={18} className="text-blue-400" />
-                    <span className="text-white font-medium">0888 430 620</span>
+                    <span className="text-white font-medium">0935 357 656</span>
                   </div>
                   <ExternalLink size={16} className="text-gray-500 group-hover/link:text-blue-400 transition" />
                 </a>
@@ -169,7 +185,7 @@ export default function ContactPage() {
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://zalo.me/0523860068"
+                  href="https://zalo.me/0906914696"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#c79f53]"
@@ -178,7 +194,7 @@ export default function ContactPage() {
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </a>
                 <a
-                  href="tel:0523860068"
+                  href="tel:0906914696"
                   className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
                 >
                   <Phone className="cta-secondary-button-icon h-5 w-5" />
@@ -188,11 +204,11 @@ export default function ContactPage() {
               <div className="cta-contacts flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#6b7280]">
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0523 860 068</span>
+                  <span className="cta-contact-text">0906 914 696</span>
                 </div>
                 <div className="cta-contact-item inline-flex items-center gap-3 text-base sm:text-lg">
                   <Phone className="cta-contact-icon h-5 w-5" />
-                  <span className="cta-contact-text">0888 430 620</span>
+                  <span className="cta-contact-text">0935 357 656</span>
                 </div>
               </div>
             </div>
