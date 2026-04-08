@@ -109,11 +109,11 @@ const trustedProfiles = [
 
 const heroVideos = {
   main:
-    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265200/cjk2zm54tiu8g1qekbo3.mp4",
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775629837/mynbbvk8nugbpofqdnfn.mp4",
   left:
-    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265173/wzdmbzpmvjsftgskingc.mp4",
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775630180/a4v72tnecdz9anyshbb4.mp4",
   right:
-    "https://res.cloudinary.com/djpujlimr/video/upload/v1775265109/dzegwkkj4g3ivyuzc9ch.mp4",
+    "https://res.cloudinary.com/djpujlimr/video/upload/v1775631677/fpfebij0tcvyop5mjk1t.mp4",
 };
 
 const caseStudies = [
