@@ -1,8 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { FileText, ExternalLink } from "lucide-react";
-
 const PDF_SRC = "/ShortPro-optimized.pdf";
 
 const categories = [
@@ -161,24 +158,10 @@ export default function BlogPage() {
     blogPosts,
   };
 
-  /* Detect iOS/iPadOS — these platforms cannot render PDFs inside iframes */
-  const [isIOS, setIsIOS] = useState(false);
-
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    const ios =
-      /iPad|iPhone|iPod/.test(ua) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    setIsIOS(ios);
-  }, []);
-
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/*
-        Trang blog hiện chỉ hiển thị một khung PDF cố định để người dùng cuộn slide ngay trong khung.
-        - Trên desktop / Android: dùng iframe hiển thị PDF trực tiếp.
-        - Trên iOS (Safari không hỗ trợ iframe PDF): hiển thị nút mở PDF trong tab mới.
-        
+        Trang About hiện chỉ hiển thị một khung PDF cố định để người dùng cuộn slide ngay trong khung.
         Responsive height tính chính xác:
           Header mobile  = 64px (h-16),  md+ = 80px (h-20)
           Section padding-top: 1.75rem (28px) trên mọi breakpoint
@@ -188,63 +171,17 @@ export default function BlogPage() {
       <section className="px-3 pb-3 pt-[calc(4rem+1.25rem)] sm:px-4 sm:pb-4 sm:pt-[calc(4rem+1.5rem)] md:px-6 md:pb-6 md:pt-[calc(5rem+1.5rem)] lg:px-8 lg:pb-8 lg:pt-[calc(5rem+1.75rem)]">
         <div className="mx-auto max-w-7xl">
           <div className="overflow-hidden rounded-2xl border border-[#dbe6f5] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:rounded-[24px] md:rounded-[28px]">
-            {isIOS ? (
-              /* ── iOS fallback: nút mở PDF trong tab mới ── */
-              <div className="flex flex-col items-center justify-center gap-6 px-6 py-20 text-center"
-                style={{
-                  height: "calc(100dvh - 6rem)",
-                  minHeight: "400px",
-                }}
-              >
-                <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#10264d] to-[#1e3a6e] shadow-lg">
-                  <FileText className="h-10 w-10 text-[#F2E3BA]" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-slate-800 sm:text-2xl">
-                    ShortPro — Tài liệu giới thiệu
-                  </h2>
-                  <p className="mx-auto mt-2 max-w-md text-sm text-slate-500 sm:text-base">
-                    Trình duyệt trên thiết bị này không hỗ trợ xem PDF trực tiếp. Nhấn nút bên dưới để mở tài liệu.
-                  </p>
-                </div>
-                <a
-                  href={PDF_SRC}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#10264d] to-[#1e3a6e] px-7 py-3.5 text-sm font-semibold text-[#F2E3BA] shadow-[0_8px_24px_rgba(16,38,77,0.3)] transition-all hover:scale-105 hover:brightness-110 sm:text-base"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Mở tài liệu PDF
-                </a>
-              </div>
-            ) : (
-              /* ── Desktop / Android: iframe hiển thị PDF ── */
-              <iframe
-                title="ShortPro PDF Preview"
-                src={`${PDF_SRC}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
-                className="w-full"
-                style={{
-                  /* 100dvh trừ header + section padding + viền container.
-                     dvh (dynamic viewport height) xử lý thanh địa chỉ ẩn/hiện trên mobile. */
-                  height: "calc(100dvh - 5.75rem)",
-                  minHeight: "500px",
-                }}
-                scrolling="yes"
-              />
-            )}
-          </div>
-
-          {/* Nút mở PDF trong tab mới — luôn hiển thị cho mọi thiết bị */}
-          <div className="mt-3 flex justify-end sm:mt-4">
-            <a
-              href={PDF_SRC}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium text-slate-600 shadow-sm transition-all hover:border-slate-300 hover:bg-slate-50 hover:text-slate-800 sm:text-sm"
-            >
-              <ExternalLink className="h-3.5 w-3.5" />
-              Mở trong tab mới
-            </a>
+            <iframe
+              title="ShortPro PDF Preview"
+              src={`${PDF_SRC}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+              className="block w-full overflow-auto"
+              style={{
+                height: "calc(100dvh - 5.75rem)",
+                minHeight: "500px",
+                WebkitOverflowScrolling: "touch",
+              }}
+              scrolling="yes"
+            />
           </div>
         </div>
       </section>
