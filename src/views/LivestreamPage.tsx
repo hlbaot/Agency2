@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   ChevronRight,
   ExternalLink,
-  HelpCircle,
   Minus,
   Plus,
 } from "lucide-react";
