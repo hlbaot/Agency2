@@ -34,12 +34,12 @@ const pricingPlans = {
       "Hậu kỳ đến khi hoàn thiện",
     ],
     rows: [
-      { qty: "10", withActor: "5.000.000", withoutActor: "4.500.000", duration: "1 buổi (4h)", completion: "1 tuần" },
-      { qty: "20", withActor: "7.000.000", withoutActor: "6.000.000", duration: "1 ngày (8h)", completion: "3 tuần" },
-      { qty: "40", withActor: "13.000.000", withoutActor: "12.000.000", duration: "2 ngày", completion: "1,5 tháng" },
-      { qty: "100", withActor: "30.000.000", withoutActor: "25.000.000", duration: "5 ngày", completion: "3 tháng" },
-      { qty: "200", withActor: "58.000.000", withoutActor: "48.000.000", duration: "10 ngày", completion: "6 tháng" },
-      { qty: "400", withActor: "110.000.000", withoutActor: "90.000.000", duration: "20 ngày", completion: "1 năm" },
+      { qty: "10", withActor: "8.000.000", withoutActor: "7.500.000", duration: "1 buổi (4h)", completion: "1 tuần" },
+      { qty: "20", withActor: "12.000.000", withoutActor: "11.000.000", duration: "1 ngày (8h)", completion: "3 tuần" },
+      { qty: "40", withActor: "23.000.000", withoutActor: "21.000.000", duration: "2 ngày", completion: "1,5 tháng" },
+      { qty: "100", withActor: "50.000.000", withoutActor: "45.000.000", duration: "5 ngày", completion: "3 tháng" },
+      { qty: "200", withActor: "95.000.000", withoutActor: "85.000.000", duration: "10 ngày", completion: "6 tháng" },
+      { qty: "400", withActor: "180.000.000", withoutActor: "160.000.000", duration: "20 ngày", completion: "1 năm" },
     ],
   },
   "cao-cap": {
@@ -64,12 +64,12 @@ const pricingPlans = {
       "Hậu kỳ đến khi hoàn thiện",
     ],
     rows: [
-      { qty: "10", withActor: "9.000.000", withoutActor: "8.000.000", duration: "4h", completion: "1 tuần" },
-      { qty: "20", withActor: "13.000.000", withoutActor: "11.000.000", duration: "8h", completion: "3 tuần" },
-      { qty: "40", withActor: "24.000.000", withoutActor: "20.000.000", duration: "2 ngày", completion: "1,5 tháng" },
-      { qty: "100", withActor: "58.000.000", withoutActor: "48.000.000", duration: "5 ngày", completion: "3 tháng" },
-      { qty: "200", withActor: "110.000.000", withoutActor: "90.000.000", duration: "10 ngày", completion: "6 tháng" },
-      { qty: "400", withActor: "210.000.000", withoutActor: "160.000.000", duration: "20 ngày", completion: "1 năm" },
+      { qty: "10", withActor: "12.000.000", withoutActor: "11.000.000", duration: "4h", completion: "1 tuần" },
+      { qty: "20", withActor: "18.000.000", withoutActor: "16.000.000", duration: "8h", completion: "3 tuần" },
+      { qty: "40", withActor: "34.000.000", withoutActor: "30.000.000", duration: "2 ngày", completion: "1,5 tháng" },
+      { qty: "100", withActor: "75.000.000", withoutActor: "65.000.000", duration: "5 ngày", completion: "3 tháng" },
+      { qty: "200", withActor: "140.000.000", withoutActor: "85.000.000", duration: "10 ngày", completion: "6 tháng" },
+      { qty: "400", withActor: "270.000.000", withoutActor: "160.000.000", duration: "20 ngày", completion: "1 năm" },
     ],
   },
 } as const;
@@ -423,8 +423,63 @@ export default function PricingPage() {
             </div>
           </div>
 
+          <div className="space-y-5 lg:hidden">
+            {currentPlan.rows.map((row) => (
+              <div
+                key={row.qty}
+                className={`overflow-hidden rounded-[28px] bg-white shadow-[0_18px_42px_rgba(8,21,47,0.08)] ${
+                  isPremiumPlan ? "border border-[#e7cf96]" : "border border-[#d7eaf1]"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4 px-5 pb-4 pt-5 sm:px-6">
+                  <div className="min-w-0">
+                    <p className="text-[2.1rem] font-black leading-none text-[#111827]">
+                      {row.qty}
+                      <span className="ml-2 text-[1rem] font-medium text-[#6b7280]">videos</span>
+                    </p>
+                  </div>
+                  <span
+                    className={`rounded-xl border px-4 py-2 text-sm font-semibold ${
+                      isPremiumPlan
+                        ? "border-[#e7cf96] bg-[#fff8e8] text-[#c3922e]"
+                        : "border-[#bfe2ef] bg-[#f0fbff] text-[#1497b8]"
+                    }`}
+                  >
+                    {row.completion}
+                  </span>
+                </div>
+
+                <div className={`border-t ${isPremiumPlan ? "border-[#f0dfb4]" : "border-[#d7eaf1]"}`}>
+                  <div className="flex items-center justify-between gap-4 px-5 py-5 sm:px-6">
+                    <div className="flex items-center gap-3 text-[#5a6270]">
+                      <UserCheck size={22} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />
+                      <span className="text-[1.05rem]">Có diễn viên</span>
+                    </div>
+                    <span className="text-right text-[1.05rem] font-black text-[#111827]">{row.withActor}đ</span>
+                  </div>
+
+                  <div className={`flex items-center justify-between gap-4 border-t px-5 py-5 sm:px-6 ${isPremiumPlan ? "border-[#f0dfb4]" : "border-[#d7eaf1]"}`}>
+                    <div className="flex items-center gap-3 text-[#5a6270]">
+                      <UserX size={22} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />
+                      <span className="text-[1.05rem]">Không diễn viên</span>
+                    </div>
+                    <span className="text-right text-[1.05rem] font-black text-[#111827]">{row.withoutActor}đ</span>
+                  </div>
+
+                  <div className={`flex items-center justify-between gap-4 border-t px-5 py-5 sm:px-6 ${isPremiumPlan ? "border-[#f0dfb4]" : "border-[#d7eaf1]"}`}>
+                    <div className="flex items-center gap-3 text-[#5a6270]">
+                      <Clock3 size={22} className={isPremiumPlan ? "text-[#c3922e]" : "text-[#1497b8]"} />
+                      <span className="text-[1.05rem]">Thời gian quay</span>
+                    </div>
+                    <span className="text-right text-[1rem] text-[#111827]">{row.duration}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div
-            className={`overflow-hidden rounded-[28px] bg-white shadow-[0_18px_42px_rgba(8,21,47,0.08)] ${
+            className={`hidden overflow-hidden rounded-[28px] bg-white shadow-[0_18px_42px_rgba(8,21,47,0.08)] lg:block ${
               isPremiumPlan ? "border border-[#d9bd79]" : "border border-[#bfe2ef]"
             }`}
           >

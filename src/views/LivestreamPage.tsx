@@ -27,8 +27,8 @@ const livestreamSteps = [
   },
   {
     step: "BƯỚC 02",
-    title: "Team Jee gửi báo giá & tư vấn booking",
-    desc: "Jee tư vấn chiến lược livestream, lựa chọn gương mặt phù hợp, định hướng nội dung và gửi báo giá chi tiết. Khách hàng được hỗ trợ lựa chọn giờ booking, khung giờ và nền tảng livestream tối ưu nhất.",
+    title: "Team Short Pro gửi báo giá & tư vấn booking",
+    desc: "Short Pro tư vấn chiến lược livestream, lựa chọn gương mặt phù hợp, định hướng nội dung và gửi báo giá chi tiết. Khách hàng được hỗ trợ lựa chọn giờ booking, khung giờ và nền tảng livestream tối ưu nhất.",
   },
   {
     step: "BƯỚC 03",
@@ -43,13 +43,13 @@ const livestreamSteps = [
   {
     step: "BƯỚC 05",
     title: "Tổ chức & giám sát phiên livestream độc quyền",
-    desc: "Jee trực tiếp tổ chức, giám sát toàn bộ phiên live độc quyền của thương hiệu từ setup ánh sáng, âm thanh, kỹ thuật đến quản lý timeline và tương tác trực tiếp. Đồng thời kết nối với các phiên add-in để tối ưu lượt tiếp cận và doanh số.",
+    desc: "Short Pro trực tiếp tổ chức, giám sát toàn bộ phiên live độc quyền của thương hiệu từ setup ánh sáng, âm thanh, kỹ thuật đến quản lý timeline và tương tác trực tiếp. Đồng thời kết nối với các phiên add-in để tối ưu lượt tiếp cận và doanh số.",
   },
 ];
 
 const faqs = [
   {
-    q: "Jee Talents hỗ trợ những nền tảng livestream nào?",
+    q: "Short Pro hỗ trợ những nền tảng livestream nào?",
     a: "Facebook, TikTok, Shopee Live, YouTube và các kênh thương mại điện tử khác.",
   },
   {
@@ -57,7 +57,7 @@ const faqs = [
     a: "Có. Chúng tôi đề xuất shortlist phù hợp để bạn duyệt trước khi chốt booking.",
   },
   {
-    q: "Jee có hỗ trợ sản xuất trọn gói không?",
+    q: "Short Pro có hỗ trợ sản xuất trọn gói không?",
     a: "Có. Team hỗ trợ từ chiến lược, booking, setup kỹ thuật đến vận hành và báo cáo sau live.",
   },
   {
