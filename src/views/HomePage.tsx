@@ -123,7 +123,7 @@ const caseStudies = [
     category: "F&B",
     views: "2.5M",
     mediaSrc:
-      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265200/cjk2zm54tiu8g1qekbo3.mp4",
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775630180/a4v72tnecdz9anyshbb4.mp4",
   },
   {
     name: "Spa Bella Beauty",
@@ -131,7 +131,7 @@ const caseStudies = [
     category: "Spa",
     views: "1.8M",
     mediaSrc:
-      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265173/wzdmbzpmvjsftgskingc.mp4",
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775630190/aifou9jjfxn0orczg1q2.mp4",
   },
   {
     name: "BĐS Golden Land",
@@ -139,7 +139,7 @@ const caseStudies = [
     category: "Bất động sản",
     views: "3.2M",
     mediaSrc:
-      "https://res.cloudinary.com/djpujlimr/video/upload/v1775265109/dzegwkkj4g3ivyuzc9ch.mp4",
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775631677/fpfebij0tcvyop5mjk1t.mp4",
   },
   {
     name: "Thời trang Moly",
@@ -147,7 +147,7 @@ const caseStudies = [
     category: "Thời trang",
     views: "4.1M",
     mediaSrc:
-      "https://res.cloudinary.com/djpujlimr/video/upload/v1775264958/ftysptquwv243a4qnic7.mp4",
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775629837/mynbbvk8nugbpofqdnfn.mp4",
   },
 ];
 

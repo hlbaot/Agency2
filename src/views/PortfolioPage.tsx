@@ -5,10 +5,6 @@ import Link from "next/link";
 import { Play, ChevronDown, Eye, Phone, ChevronRight, Zap } from "lucide-react";
 
 const packageFilters = ["Tất cả", "Gói Chuyên Nghiệp", "Gói Cao Cấp"];
-const categoryFilters = [
-  "Tất cả", "F&B", "Spa - Thẩm Mỹ", "Bất động sản", "Thời trang",
-  "Thiết bị", "Nha khoa", "Beauty", "Vlog - Review", "Hướng dẫn", "Bán hàng", "Chuyên gia",
-];
 
 const colors = [
   "from-pink-500 to-rose-600",
@@ -54,6 +50,45 @@ const portfolioVideos = [
   "https://res.cloudinary.com/djpujlimr/video/upload/v1775569747/ifnpan3xwnijx6jro7ns.mp4",
 ];
 
+const premiumPortfolioProjects = [
+  { id: 31, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "3.2M", handle: "@shortpro.vn", colorIdx: 0, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775629837/mynbbvk8nugbpofqdnfn.mp4" },
+  { id: 32, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "3.4M", handle: "@shortpro.vn", colorIdx: 1, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775629838/kw7lvj26pwlp6fwwvei3.mp4" },
+  { id: 33, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "3.7M", handle: "@shortpro.vn", colorIdx: 2, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630332/c15hpglhnuizhofmqxsj.mp4" },
+  { id: 34, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "3.9M", handle: "@shortpro.vn", colorIdx: 3, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630332/iejacm8gltg33iqufulz.mp4" },
+  { id: 35, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "4.1M", handle: "@shortpro.vn", colorIdx: 4, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630337/yo3ggxfikhyqgumfrmr3.mp4" },
+  { id: 36, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "4.3M", handle: "@shortpro.vn", colorIdx: 5, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630338/e2au6jgmpehtonbzgm7i.mp4" },
+  { id: 37, title: "Beauty", category: "Thời trang", packageType: "Gói Cao Cấp", views: "4.5M", handle: "@shortpro.vn", colorIdx: 6, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630341/jdyqna66y6yf20yexmny.mp4" },
+  { id: 38, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "2.8M", handle: "@shortpro.vn", colorIdx: 7, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630180/a4v72tnecdz9anyshbb4.mp4" },
+  { id: 39, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "3.1M", handle: "@shortpro.vn", colorIdx: 0, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630190/aifou9jjfxn0orczg1q2.mp4" },
+  { id: 40, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "3.3M", handle: "@shortpro.vn", colorIdx: 1, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630188/un1u3d5k0rylyjgp5hxe.mp4" },
+  { id: 41, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "3.6M", handle: "@shortpro.vn", colorIdx: 2, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630194/nhndife8fgvrvbyveqnl.mp4" },
+  { id: 42, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "3.8M", handle: "@shortpro.vn", colorIdx: 3, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630197/bkhz0sa9apqdn6cw3bmb.mp4" },
+  { id: 43, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "4.0M", handle: "@shortpro.vn", colorIdx: 4, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630198/dscsylkknxw5phow3gyr.mp4" },
+  { id: 44, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "4.2M", handle: "@shortpro.vn", colorIdx: 5, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630198/azacqv1ep4l5gskc5c7t.mp4" },
+  { id: 45, title: "Story Telling", category: "F&B", packageType: "Gói Cao Cấp", views: "4.4M", handle: "@shortpro.vn", colorIdx: 6, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630201/ilrablxcog4wca6hggux.mp4" },
+] as const;
+
+const professionalPortfolioProjects = [
+  { id: 46, title: "Vlog - Review", category: "Garage auto", packageType: "Gói Chuyên Nghiệp", views: "2.4M", handle: "@shortpro.vn", colorIdx: 7, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630858/mrcs5wlvgls8pcxqosch.mp4" },
+  { id: 47, title: "Vlog - Review", category: "Garage auto", packageType: "Gói Chuyên Nghiệp", views: "2.6M", handle: "@shortpro.vn", colorIdx: 0, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630895/ldwv7o3xbaemp5l5kduw.mp4" },
+  { id: 48, title: "Vlog - Review", category: "F&B", packageType: "Gói Chuyên Nghiệp", views: "2.9M", handle: "@shortpro.vn", colorIdx: 1, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630899/lwlszejesti1uvygbmla.mp4" },
+  { id: 49, title: "Vlog - Review", category: "F&B", packageType: "Gói Chuyên Nghiệp", views: "3.1M", handle: "@shortpro.vn", colorIdx: 2, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630875/aohylzqjxpvjnsqt8sdh.mp4" },
+  { id: 50, title: "Hướng dẫn", category: "Sản phẩm", packageType: "Gói Chuyên Nghiệp", views: "2.7M", handle: "@shortpro.vn", colorIdx: 3, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630882/p9dgvrqlx5jjqndfudga.mp4" },
+  { id: 51, title: "Hướng dẫn", category: "Sản phẩm", packageType: "Gói Chuyên Nghiệp", views: "2.8M", handle: "@shortpro.vn", colorIdx: 4, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630872/ck1lhiwjyt0mshkycxnv.mp4" },
+  { id: 52, title: "Hướng dẫn", category: "Sản phẩm", packageType: "Gói Chuyên Nghiệp", views: "3.0M", handle: "@shortpro.vn", colorIdx: 5, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775630867/ywuwufoafvpjp08l0eoo.mp4" },
+  { id: 53, title: "Bán hàng", category: "Thiết bị vệ sinh", packageType: "Gói Chuyên Nghiệp", views: "3.4M", handle: "@shortpro.vn", colorIdx: 6, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631418/iivepawwj7asnib1acl0.mp4" },
+  { id: 54, title: "Bán hàng", category: "Thiết bị vệ sinh", packageType: "Gói Chuyên Nghiệp", views: "3.6M", handle: "@shortpro.vn", colorIdx: 7, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631417/i3aklp1kha1ozepr9721.mp4" },
+  { id: 55, title: "Bán hàng", category: "Thiết bị vệ sinh", packageType: "Gói Chuyên Nghiệp", views: "3.8M", handle: "@shortpro.vn", colorIdx: 0, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631417/wff3klzdl7rw7cgn1gv4.mp4" },
+  { id: 56, title: "Bán hàng", category: "Thiết bị vệ sinh", packageType: "Gói Chuyên Nghiệp", views: "4.0M", handle: "@shortpro.vn", colorIdx: 1, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631416/urkdxunizdcdnp2q7rpu.mp4" },
+  { id: 57, title: "Chuyên gia", category: "Bất động sản", packageType: "Gói Chuyên Nghiệp", views: "4.2M", handle: "@shortpro.vn", colorIdx: 2, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631677/fpfebij0tcvyop5mjk1t.mp4" },
+  { id: 58, title: "Chuyên gia", category: "Bất động sản", packageType: "Gói Chuyên Nghiệp", views: "4.4M", handle: "@shortpro.vn", colorIdx: 3, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775631637/g3lixilpj9cth5jwamx1.mp4" },
+  { id: 59, title: "Beauty", category: "Phụ kiện thời trang", packageType: "Gói Chuyên Nghiệp", views: "3.5M", handle: "@shortpro.vn", colorIdx: 4, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775632563/boj5zu7tr9ntqmlvgc57.mp4" },
+  { id: 60, title: "Beauty", category: "Phụ kiện thời trang", packageType: "Gói Chuyên Nghiệp", views: "3.7M", handle: "@shortpro.vn", colorIdx: 5, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775632564/kfc2z9jhouvie7b4rwfc.mp4" },
+  { id: 61, title: "Beauty", category: "Phụ kiện thời trang", packageType: "Gói Chuyên Nghiệp", views: "3.9M", handle: "@shortpro.vn", colorIdx: 6, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775632571/s1mis3ln8acs2eu69tu6.mp4" },
+  { id: 62, title: "Beauty", category: "Phụ kiện thời trang", packageType: "Gói Chuyên Nghiệp", views: "4.1M", handle: "@shortpro.vn", colorIdx: 7, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775632574/gajlzusv2skjehjphw9y.mp4" },
+  { id: 63, title: "Beauty", category: "Phụ kiện thời trang", packageType: "Gói Chuyên Nghiệp", views: "4.3M", handle: "@shortpro.vn", colorIdx: 0, videoSrc: "https://res.cloudinary.com/djpujlimr/video/upload/v1775632577/kfqbkwobc1gqozpqnjba.mp4" },
+] as const;
+
 interface Project {
   id: number;
   title: string;
@@ -66,6 +101,8 @@ interface Project {
 }
 
 const allProjects: Project[] = [
+  ...professionalPortfolioProjects,
+  ...premiumPortfolioProjects,
   { id: 19, title: "Review menu quán mới", category: "F&B", packageType: "Gói Chuyên Nghiệp", views: "2.7M", handle: "@foodreviewvn", colorIdx: 2, videoSrc: portfolioVideos[21] },
   { id: 20, title: "Spa treatment thực tế", category: "Spa - Thẩm Mỹ", packageType: "Gói Cao Cấp", views: "3.1M", handle: "@glowspacare", colorIdx: 3, videoSrc: portfolioVideos[22] },
   { id: 21, title: "Review căn hộ bàn giao", category: "Bất động sản", packageType: "Gói Cao Cấp", views: "4.6M", handle: "@urbanhomevn", colorIdx: 4, videoSrc: portfolioVideos[23] },
@@ -103,6 +140,10 @@ export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("Tất cả");
   const [showMoreCats, setShowMoreCats] = useState(false);
   const [visibleCount, setVisibleCount] = useState(8);
+  const categoryFilters = useMemo(
+    () => ["Tất cả", ...Array.from(new Set(allProjects.map((project) => project.category)))],
+    []
+  );
 
   const filtered = useMemo(() => {
     return allProjects.filter((p) => {
