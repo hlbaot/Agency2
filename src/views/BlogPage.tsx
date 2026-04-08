@@ -1,7 +1,5 @@
 "use client";
 
-const PDF_SRC = "/ShortPro-optimized.pdf";
-
 const categories = [
   { name: "Tất cả", count: 24 },
   { name: "Insight", count: 8 },
@@ -152,6 +150,15 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
+const aboutSlides = [
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650689/hhr12zuqnhwlsvtkmo2r.png",
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650696/epjoqgqsd0p0agvnrszn.png",
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650692/wss1nxkjcqiscj5x2vlw.png",
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650689/na4lbnjb07rb7hrhrduu.png",
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650689/svlt0wnyybw0vuplps50.png",
+  "https://res.cloudinary.com/djpujlimr/image/upload/v1775650689/aolvvg9lap6hczxc4lyi.png",
+];
+
 export default function BlogPage() {
   const hiddenBlogArchive = {
     categories,
@@ -161,27 +168,39 @@ export default function BlogPage() {
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/*
-        Trang About hiện chỉ hiển thị một khung PDF cố định để người dùng cuộn slide ngay trong khung.
+        Trang About hiện hiển thị các slide ảnh trong một khung cuộn dọc cố định.
+        Ảnh được giữ đúng thứ tự từ trên xuống như tài liệu gốc.
         Responsive height tính chính xác:
           Header mobile  = 64px (h-16),  md+ = 80px (h-20)
           Section padding-top: 1.75rem (28px) trên mọi breakpoint
           Section padding-bottom: 2rem (32px), lg = 2.5rem (40px)
-          → iframe height = 100dvh − header − padding-top − padding-bottom − border/gap (16px)
+          → khung scroll = 100dvh − header − padding-top − padding-bottom − border/gap
       */}
-      <section className="px-3 pb-3 pt-[calc(4rem+1.25rem)] sm:px-4 sm:pb-4 sm:pt-[calc(4rem+1.5rem)] md:px-6 md:pb-6 md:pt-[calc(5rem+1.5rem)] lg:px-8 lg:pb-8 lg:pt-[calc(5rem+1.75rem)]">
+      <section className="px-3 pb-0 pt-16 sm:px-4 md:px-6 md:pt-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-2xl border border-[#dbe6f5] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:rounded-[24px] md:rounded-[28px]">
-            <iframe
-              title="ShortPro PDF Preview"
-              src={`${PDF_SRC}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
-              className="block w-full overflow-auto"
-              style={{
-                height: "calc(100dvh - 5.75rem)",
-                minHeight: "500px",
-                WebkitOverflowScrolling: "touch",
-              }}
-              scrolling="yes"
-            />
+          <div
+            className="h-[calc(100dvh-4rem)] overflow-y-auto rounded-b-2xl border border-[#dbe6f5] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.06)] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:rounded-b-[24px] md:h-[calc(100dvh-5rem)] md:rounded-b-[28px]"
+            style={{
+              minHeight: "500px",
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
+            <div className="bg-[#f8fbff] p-2 sm:p-3 md:p-4">
+              {aboutSlides.map((slide, index) => (
+                <div
+                  key={slide}
+                  className="flex min-h-[calc(100dvh-5rem)] items-center justify-center md:min-h-[calc(100dvh-6rem)]"
+                >
+                  <img
+                    src={slide}
+                    alt={`About slide ${index + 1}`}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="block h-full max-h-[calc(100dvh-5rem)] w-full object-contain md:max-h-[calc(100dvh-6rem)]"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
