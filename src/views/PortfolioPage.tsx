@@ -324,7 +324,7 @@ export default function PortfolioPage() {
                 Hãy để chúng tôi tạo nên những video ấn tượng cho thương hiệu của bạn.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#c79f53]">
+                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>

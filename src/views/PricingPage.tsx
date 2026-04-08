@@ -333,7 +333,7 @@ export default function PricingPage() {
                   onClick={() => setActivePlan(tab.id)}
                   className={`rounded-full px-5 py-3 text-sm font-semibold transition-all sm:px-6 ${
                     activePlan === tab.id
-                      ? "bg-[#d4ae68] text-[#08152f] shadow-[0_10px_24px_rgba(212,174,104,0.24)]"
+                      ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-[#08152f] shadow-[0_10px_24px_rgba(201,161,99,0.26)]"
                       : "text-[#6b7280] hover:bg-[#f5f7fb] hover:text-[#08152f]"
                   }`}
                 >
@@ -550,7 +550,7 @@ export default function PricingPage() {
                     </div>
                     <div className="flex flex-row items-start gap-2 md:flex-col md:items-end">
                       {bundle.popular ? (
-                        <span className="rounded-full bg-[#d4ae68] px-3 py-1 text-[11px] font-semibold text-[#08152f]">
+                        <span className="rounded-full bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-3 py-1 text-[11px] font-semibold text-[#08152f] shadow-[0_6px_16px_rgba(201,161,99,0.2)]">
                           ✦ Phổ biến nhất
                         </span>
                       ) : null}
@@ -613,7 +613,7 @@ export default function PricingPage() {
                     href="/contact"
                     className={`mt-4 block rounded-md px-4 py-3 text-center text-sm font-semibold transition-all hover:cursor-pointer ${
                       isOpen
-                        ? "bg-[#d4ae68] text-[#08152f] hover:bg-[#c79f53]"
+                        ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-[#08152f] hover:brightness-[1.03] hover:shadow-[0_12px_28px_rgba(201,161,99,0.28)]"
                         : "bg-white/10 text-white/85 hover:bg-white/15"
                     }`}
                   >
@@ -911,7 +911,7 @@ export default function PricingPage() {
                 Liên hệ ngay để được tư vấn gói dịch vụ phù hợp nhất.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#c79f53]">
+                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>

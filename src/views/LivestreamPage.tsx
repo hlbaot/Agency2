@@ -106,7 +106,7 @@ export default function LivestreamPage() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="flex items-center justify-between rounded-[18px] bg-[#d8be8a] px-4 py-3 text-[0.98rem] font-medium text-[#0a1f44] transition-all hover:cursor-pointer hover:bg-[#ceb075]"
+                    className="flex items-center justify-between rounded-[18px] bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-4 py-3 text-[0.98rem] font-medium text-[#0a1f44] shadow-[0_8px_18px_rgba(201,161,99,0.18)] transition-all hover:cursor-pointer hover:brightness-[1.03] hover:shadow-[0_12px_24px_rgba(201,161,99,0.24)]"
                   >
                     <span className="max-w-[232px] leading-7 text-[#0a1f44]">{item.label}</span>
                     <ExternalLink size={18} className="text-[#0a1f44]" />

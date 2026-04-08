@@ -34,10 +34,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-purple-deeper/70 backdrop-blur-xl shadow-lg shadow-pink-brand/5 border-b border-white/5"
-          : "bg-transparent border-b border-black"
-        }`}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#10264d]/96 backdrop-blur-xl transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -58,12 +55,8 @@ export default function Header() {
                   href={item.href}
                   onClick={closeMobileMenu}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
-                      ? scrolled
-                        ? "text-pink-brand bg-pink-brand/10"
-                        : "text-purple-dark bg-black/5"
-                      : scrolled
-                        ? "text-gray-300 hover:text-white hover:bg-white/5"
-                        : "text-purple-dark hover:text-black hover:bg-black/5"
+                      ? "text-[#F2E3BA] bg-white/10"
+                      : "text-[#F2E3BA] hover:text-[#fff2c8] hover:bg-white/10"
                     }`}
                 >
                   {item.label}
@@ -77,19 +70,13 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={closeMobileMenu}
-              className={`hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 ${scrolled
-                  ? "gradient-bg text-white hover:opacity-90 animate-pulse-glow"
-                  : "border border-black text-purple-dark hover:bg-black/5"
-                }`}
+              className="hidden sm:inline-flex rounded-full bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_38%,#b8862b_100%)] px-5 py-2.5 text-sm font-semibold text-[#10264d] shadow-[0_10px_24px_rgba(201,161,99,0.32)] transition-all hover:scale-105 hover:brightness-105"
             >
               Nhận tư vấn
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden p-2 rounded-lg transition ${scrolled
-                  ? "text-white hover:bg-white/10"
-                  : "text-purple-dark hover:bg-black/5"
-                }`}
+              className="rounded-lg p-2 text-[#F2E3BA] transition hover:bg-white/10 md:hidden"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -99,7 +86,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-purple-deeper/70 backdrop-blur-xl border-t border-white/5 animate-fade-in-up">
+        <div className="animate-fade-in-up border-t border-white/10 bg-[#10264d]/98 backdrop-blur-xl md:hidden">
           <div className="px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <Link

@@ -387,39 +387,37 @@ export default function HomePage() {
   return (
     <div className="light-page min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative min-h-screen overflow-hidden bg-[#fbfcff] text-[#08152f]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_45%,rgba(15,42,86,0.24)_0%,rgba(15,42,86,0.16)_16%,rgba(15,42,86,0.1)_30%,rgba(15,42,86,0.05)_46%,rgba(255,255,255,0)_68%),linear-gradient(180deg,#ffffff_0%,#f8fbff_40%,#ffffff_100%)]" />
-        <div className="absolute inset-0 opacity-22 [background-image:linear-gradient(rgba(39,77,132,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(39,77,132,0.03)_1px,transparent_1px)] [background-size:18px_18px]" />
-        <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4f73ad]/8 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-[26rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#173460]/7 blur-3xl" />
-        <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#173460]/8 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#173460]/7 blur-3xl" />
+      <section className="relative min-h-screen overflow-hidden bg-[linear-gradient(135deg,#183363_0%,#091a3c_55%,#274d84_100%)] text-white">
+        <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4e76b5]/14 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-[28rem] w-[46rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#335c99]/12 blur-3xl" />
+        <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#426ca8]/14 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#0a1f44]/18 blur-3xl" />
 
         <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
           <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
             <div className="flex flex-col items-start">
               <div className="mb-6 animate-fade-in-up">
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#C9A163]/50 bg-white/70 px-[18px] py-2 text-[13px] font-bold tracking-[0.01em] text-[#b88f4f] backdrop-blur-sm">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#C9A163]/45 bg-white/10 px-[18px] py-2 text-[13px] font-bold tracking-[0.01em] text-[#f0cf86] backdrop-blur-sm">
               <Star size={14} fill="currentColor" />
               Studio TikTok #1 cho thương hiệu Việt
                 </span>
               </div>
 
               <h1 className="animate-fade-in-up mb-5 text-[clamp(2rem,4vw,3.5rem)] font-black leading-[1.15] tracking-tight" style={{ animationDelay: "0.12s" }}>
-                <span className="block text-[#08152f]">Thương hiệu không</span>
+                <span className="block" style={{ color: "#ffffff" }}>Thương hiệu không</span>
                 <span className="block">
-                  <span className="text-[#08152f]">thắng nhờ 1 cú viral - </span>
-                  <span className="bg-[linear-gradient(135deg,#d8b167_0%,#b8862b_100%)] bg-clip-text text-transparent">
+                  <span style={{ color: "#ffffff" }}>thắng nhờ 1 cú viral - </span>
+                  <span className="bg-[linear-gradient(135deg,#fff1bf_0%,#f0cf86_22%,#d9a84c_54%,#b8862b_100%)] bg-clip-text text-transparent [text-shadow:0_10px_30px_rgba(201,161,99,0.18)]">
                     Đó
                   </span>
                 </span>
-                <span className="block bg-[linear-gradient(135deg,#d8b167_0%,#b8862b_100%)] bg-clip-text text-transparent">
+                <span className="block bg-[linear-gradient(135deg,#fff1bf_0%,#f0cf86_22%,#d9a84c_54%,#b8862b_100%)] bg-clip-text text-transparent [text-shadow:0_10px_30px_rgba(201,161,99,0.18)]">
                   là kết quả của chiến lược
                 </span>
               </h1>
 
               <p
-                className="animate-fade-in-up mb-8 max-w-[500px] text-base leading-7 text-[#4d5f7e]"
+                className="animate-fade-in-up mb-8 max-w-[500px] text-base leading-7 text-white/78"
                 style={{ animationDelay: "0.22s" }}
               >
                 Chúng tôi không chỉ quay dựng video. Chúng tôi xây dựng cỗ máy
@@ -433,13 +431,13 @@ export default function HomePage() {
               >
                 <Link
                   href="/contact"
-                  className="cursor-pointer rounded-full bg-[#C9A163] px-7 py-[13px] text-[0.95rem] font-bold text-[#0a1f44] shadow-[0_4px_20px_rgba(201,161,99,0.4)] transition-all duration-150 hover:-translate-y-0.5 hover:bg-[#b88f4f] hover:shadow-[0_8px_28px_rgba(201,161,99,0.5)]"
+                  className="cursor-pointer rounded-full bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-7 py-[13px] text-[0.95rem] font-bold text-[#0a1f44] shadow-[0_6px_20px_rgba(201,161,99,0.32)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(201,161,99,0.38)] hover:brightness-[1.03]"
                 >
                   Nhận báo giá &amp; tư vấn
                 </Link>
                 <Link
                   href="/#services"
-                  className="cursor-pointer rounded-full border-2 border-[#0a1f44]/20 bg-white/65 px-7 py-[13px] text-[0.95rem] font-bold text-[#0a1f44] transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0a1f44]/40 hover:bg-white"
+                  className="cursor-pointer rounded-full border-2 border-white/75 bg-white px-7 py-[13px] text-[0.95rem] font-bold text-[#10264d] transition-all duration-150 hover:-translate-y-0.5 hover:border-white hover:bg-[#f8fbff]"
                 >
                   Xem dịch vụ
                 </Link>
@@ -702,7 +700,7 @@ export default function HomePage() {
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[#d4ae68] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(212,174,104,0.22)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#c79f53]"
+                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
                 >
                   <span className="cta-primary-button-text">Đặt lịch tư vấn ngay</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
