@@ -78,10 +78,10 @@ const bundles = [
   {
     name: "Gói Tăng Nhận Diện, Phủ Thương Hiệu",
     price: "30.000.000 ĐỒNG",
-    videos: "100 Videos",
+    videos: "50 Videos",
     popular: true,
     headline:
-      "100 video chủ đề đa dạng, phục vụ cho việc tăng lượt tiếp cận khách hàng, phủ sóng thương hiệu.",
+      "50 video chủ đề đa dạng, phục vụ cho việc tăng lượt tiếp cận khách hàng, phủ sóng thương hiệu.",
     topics:
       "Chủ đề: Feedback khách hàng thật, Dự án đã triển khai / case thực tế, Hậu trường làm việc, quy trình, Đội ngũ, con người doanh nghiệp, ...",
     content: [
@@ -102,9 +102,9 @@ const bundles = [
   {
     name: "Gói Xây Kênh Bán Hàng",
     price: "30.000.000 ĐỒNG",
-    videos: "100 Videos",
+    videos: "50 Videos",
     headline:
-      "100 video chủ đề đa dạng, phục vụ cho việc lựa chọn sản phẩm, thúc đẩy mua hàng",
+      "50 video chủ đề đa dạng, phục vụ cho việc lựa chọn sản phẩm, thúc đẩy mua hàng",
     topics:
       "Chủ đề: Chương trình khuyến mãi, Báo giá sản phẩm, Review sản phẩm/dịch vụ",
     content: [
@@ -148,9 +148,9 @@ const bundles = [
   {
     name: "Gói Kết Nối Khách Hàng",
     price: "30.000.000 ĐỒNG",
-    videos: "100 Videos",
+    videos: "50 Videos",
     headline:
-      "100 video chủ đề đa dạng, phục vụ cho việc tăng tần suất kết nối với khách hàng",
+      "50 video chủ đề đa dạng, phục vụ cho việc tăng tần suất kết nối với khách hàng",
     topics:
       "Chủ đề: Trả lời comment, câu hỏi khách, Vlog công việc hằng ngày, Chia sẻ đời sống, hậu trường, Quan điểm cá nhân về ngành",
     content: [
@@ -170,9 +170,9 @@ const bundles = [
   {
     name: "Gói Hướng Dẫn Sử Dụng, Educate Khách Hàng",
     price: "30.000.000 ĐỒNG",
-    videos: "100 Videos",
+    videos: "50 Videos",
     headline:
-      "100 video chủ đề đa dạng, phục vụ cho việc tìm hiểu thông tin của khách hàng",
+      "50 video chủ đề đa dạng, phục vụ cho việc tìm hiểu thông tin của khách hàng",
     topics:
       "Chủ đề: Review sản phẩm, Hướng dẫn sử dụng, So sánh các loại sản phẩm, Giải thích thông số, câu hỏi thường gặp,...",
     content: [
@@ -193,9 +193,9 @@ const bundles = [
   {
     name: "Gói Xây Kênh Custom Theo Nhu Cầu",
     price: "30.000.000 ĐỒNG",
-    videos: "100 Videos",
+    videos: "50 Videos",
     headline:
-      "100 video chủ đề đa dạng, phục vụ cho việc tìm hiểu thông tin của khách hàng",
+      "50 video chủ đề đa dạng, phục vụ cho việc tìm hiểu thông tin của khách hàng",
     topics:
       "Chủ đề: Review sản phẩm, Hướng dẫn sử dụng, So sánh các loại sản phẩm, Giải thích thông số, câu hỏi thường gặp,...",
     content: [

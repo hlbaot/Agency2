@@ -118,34 +118,34 @@ const heroVideos = {
 
 const caseStudies = [
   {
-    name: "Nhà hàng Hải Sản Đại Dương",
-    handle: "@haisandaiduong",
+    name: "Story Telling F&B",
+    handle: "@shortpro.vn",
     category: "F&B",
-    views: "2.5M",
+    views: "2.8M",
     mediaSrc:
       "https://res.cloudinary.com/djpujlimr/video/upload/v1775630180/a4v72tnecdz9anyshbb4.mp4",
   },
   {
-    name: "Spa Bella Beauty",
-    handle: "@bellaspa.vn",
-    category: "Spa",
-    views: "1.8M",
+    name: "Hướng dẫn",
+    handle: "@shortpro.vn",
+    category: "Sản phẩm",
+    views: "2.7M",
     mediaSrc:
-      "https://res.cloudinary.com/djpujlimr/video/upload/v1775630190/aifou9jjfxn0orczg1q2.mp4",
+      "https://res.cloudinary.com/djpujlimr/video/upload/v1775630882/p9dgvrqlx5jjqndfudga.mp4",
   },
   {
-    name: "BĐS Golden Land",
-    handle: "@goldenland.vn",
+    name: "Chuyên gia Bất động sản",
+    handle: "@shortpro.vn",
     category: "Bất động sản",
-    views: "3.2M",
+    views: "4.2M",
     mediaSrc:
       "https://res.cloudinary.com/djpujlimr/video/upload/v1775631677/fpfebij0tcvyop5mjk1t.mp4",
   },
   {
-    name: "Thời trang Moly",
-    handle: "@moly.fashion",
+    name: "Beauty thời trang",
+    handle: "@shortpro.vn",
     category: "Thời trang",
-    views: "4.1M",
+    views: "3.2M",
     mediaSrc:
       "https://res.cloudinary.com/djpujlimr/video/upload/v1775629837/mynbbvk8nugbpofqdnfn.mp4",
   },
