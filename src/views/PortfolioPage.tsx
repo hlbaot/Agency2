@@ -243,10 +243,12 @@ export default function PortfolioPage() {
                           <video
                             className="absolute inset-0 h-full w-full object-cover"
                             src={project.videoSrc}
+                            autoPlay
                             muted
                             controls
+                            loop
                             playsInline
-                            preload="metadata"
+                            preload="auto"
                           />
                         ) : null}
                       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.18)_100%)]" />

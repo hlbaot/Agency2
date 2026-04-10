@@ -263,25 +263,11 @@ function PhoneMockup({
             <video
               className="absolute inset-0 h-full w-full object-cover"
               src={mediaSrc}
+              autoPlay
               muted
+              loop
               playsInline
-              preload="metadata"
-              ref={(node) => {
-                if (!node) return;
-                node.pause();
-                if (node.readyState >= 2) {
-                  try {
-                    node.currentTime = 0.01;
-                  } catch {}
-                }
-              }}
-              onLoadedData={(event) => {
-                const video = event.currentTarget;
-                video.pause();
-                try {
-                  video.currentTime = 0.01;
-                } catch {}
-              }}
+              preload="auto"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.06)_38%,rgba(0,0,0,0.16)_100%)]" />
           </>
@@ -628,10 +614,12 @@ export default function HomePage() {
                   <video
                     className="absolute inset-0 h-full w-full object-cover"
                     src={cs.mediaSrc}
+                    autoPlay
                     muted
                     controls
+                    loop
                     playsInline
-                    preload="metadata"
+                    preload="auto"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.32)_100%)]" />
                   <div className="pointer-events-none absolute top-3 left-3">
