@@ -243,29 +243,22 @@ export default function PortfolioPage() {
                           <video
                             className="absolute inset-0 h-full w-full object-cover"
                             src={project.videoSrc}
-                            autoPlay
                             muted
-                            loop
+                            controls
                             playsInline
-                            preload="auto"
+                            preload="metadata"
                           />
                         ) : null}
-                      {/* Overlay on hover */}
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform">
-                          <Play size={28} className="text-white ml-1" fill="white" />
-                        </div>
-                      </div>
-
+                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.18)_100%)]" />
                       {/* Category tag */}
-                      <div className="absolute top-3 left-3">
+                      <div className="pointer-events-none absolute top-3 left-3">
                         <span className="rounded-full bg-[#08152f]/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
                           {project.category}
                         </span>
                       </div>
 
                       {/* Bottom info */}
-                      <div className="absolute bottom-3 left-3 right-3">
+                      <div className="pointer-events-none absolute bottom-3 left-3 right-3">
                         <div className="flex items-center gap-2">
                           <div className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-white">
                             {project.title[0]}

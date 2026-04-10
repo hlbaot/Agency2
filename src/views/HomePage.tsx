@@ -629,24 +629,18 @@ export default function HomePage() {
                   <video
                     className="absolute inset-0 h-full w-full object-cover"
                     src={cs.mediaSrc}
-                    autoPlay
                     muted
-                    loop
+                    controls
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.32)_100%)]" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
-                    <div className="w-16 h-16 rounded-full gradient-bg flex items-center justify-center">
-                      <Play size={28} className="text-white ml-1" fill="white" />
-                    </div>
-                  </div>
-                  <div className="absolute top-3 left-3">
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.32)_100%)]" />
+                  <div className="pointer-events-none absolute top-3 left-3">
                     <span className="rounded-full bg-[#08152f]/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
                       {cs.category}
                     </span>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3">
+                  <div className="pointer-events-none absolute bottom-3 left-3 right-3">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-xs font-bold text-white">
                         {cs.name[0]}
