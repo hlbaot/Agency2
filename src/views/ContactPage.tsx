@@ -36,7 +36,7 @@ export default function ContactPage() {
               href={googleFormUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-full bg-[#0a1f44] px-6 py-3 text-sm font-bold text-[#d4ae68] shadow-[0_14px_30px_rgba(10,31,68,0.2)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#102b5e]"
+              className="inline-flex items-center gap-3 rounded-full bg-[#0a1f44] px-6 py-3 text-sm font-bold text-pink-brand shadow-[0_14px_30px_rgba(10,31,68,0.2)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:bg-[#102b5e]"
             >
               <FileText className="h-4 w-4" />
               Mở form tư vấn
@@ -50,7 +50,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Phone */}
-            <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 transition-all duration-300 group">
+            <div className="p-8 rounded-3xl bg-white/3 border border-white/5 hover:border-pink-brand/30 transition-all duration-300 group">
               <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                 <Phone size={24} />
               </div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a
                   href="tel:0906914696"
-                  className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
+                  className="flex items-center justify-between p-4 rounded-2xl bg-white/3 border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-pink-brand" />
@@ -69,7 +69,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   href="tel:0935357656"
-                  className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
+                  className="flex items-center justify-between p-4 rounded-2xl bg-white/3 border border-white/5 hover:border-pink-brand/30 hover:bg-pink-brand/5 transition-all group/link"
                 >
                   <div className="flex items-center gap-3">
                     <Phone size={18} className="text-pink-brand" />
@@ -81,7 +81,7 @@ export default function ContactPage() {
             </div>
 
             {/* Zalo */}
-            <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-blue-400/30 transition-all duration-300 group">
+            <div className="p-8 rounded-3xl bg-white/3 border border-white/5 hover:border-blue-400/30 transition-all duration-300 group">
               <div className="w-14 h-14 rounded-2xl bg-blue-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                 <MessageCircle size={24} />
               </div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
             <h2 className="text-3xl sm:text-4xl font-black">VĂN PHÒNG LÀM VIỆC</h2>
           </div>
 
-          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+          <div className="p-8 rounded-3xl bg-white/3 border border-white/5">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-white mb-6">
@@ -177,10 +177,10 @@ export default function ContactPage() {
                   <span className="cta-badge-text">Bắt đầu ngay</span>
                 </span>
               </div>
-              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
+              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-purple-dark sm:text-4xl lg:text-5xl">
                 Sẵn sàng bắt đầu?
               </h2>
-              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
+              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-normal">
                 Hãy liên hệ ngay để được tư vấn giải pháp TikTok phù hợp nhất.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
@@ -188,14 +188,14 @@ export default function ContactPage() {
                   href="https://zalo.me/0906914696"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
+                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
                 >
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </a>
                 <a
                   href="tel:0906914696"
-                  className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
+                  className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-purple-dark transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
                 >
                   <Phone className="cta-secondary-button-icon h-5 w-5" />
                   <span className="cta-secondary-button-text">Gọi ngay</span>

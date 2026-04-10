@@ -293,7 +293,7 @@ function PhoneMockup({
             <div className="absolute left-4 top-14 h-28 w-[74%] rounded-2xl bg-[linear-gradient(135deg,#f7fbff_0%,#e9f1fb_100%)] shadow-sm" />
             <div className="absolute left-5 top-[4.7rem] h-2.5 w-20 rounded-full bg-[#bfcde2]" />
             <div className="absolute left-5 top-[5.6rem] h-2.5 w-16 rounded-full bg-[#d1ddef]" />
-            <div className="absolute left-5 top-[6.5rem] h-12 w-24 rounded-xl bg-[#9cc0eb]/50" />
+            <div className="absolute left-5 top-26 h-12 w-24 rounded-xl bg-[#9cc0eb]/50" />
             <div className="absolute right-5 top-[8.7rem] h-10 w-14 rounded-xl bg-[#dfe9f6]" />
             <div className="absolute bottom-0 h-20 w-full bg-white/18" />
             <div className="absolute bottom-3 left-4 flex gap-2">
@@ -301,8 +301,8 @@ function PhoneMockup({
               <div className="h-8 w-8 rounded-full bg-[#e53935]" />
               <div className="h-7 w-7 rounded-full bg-[#ffca28]" />
             </div>
-            <div className="absolute bottom-2 right-3 h-20 w-16 rounded-t-[2rem] bg-[#1e2a3d]" />
-            <div className="absolute bottom-6 right-10 h-14 w-10 rounded-t-[1.5rem] bg-[#6c4c3d]" />
+            <div className="absolute bottom-2 right-3 h-20 w-16 rounded-t-4xl bg-[#1e2a3d]" />
+            <div className="absolute bottom-6 right-10 h-14 w-10 rounded-t-3xl bg-[#6c4c3d]" />
             <div className="absolute bottom-0 right-0 h-10 w-full bg-white/32" />
           </>
         )}
@@ -388,9 +388,9 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-screen overflow-hidden bg-[linear-gradient(135deg,#183363_0%,#091a3c_55%,#274d84_100%)] text-white">
         <div className="absolute left-14 top-10 h-72 w-72 rounded-full bg-[#4e76b5]/14 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-[28rem] w-[46rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#335c99]/12 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-112 w-184 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#335c99]/12 blur-3xl" />
         <div className="absolute right-8 top-16 h-96 w-96 rounded-full bg-[#426ca8]/14 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#0a1f44]/18 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-72 w-2xl -translate-x-1/2 rounded-full bg-[#0a1f44]/18 blur-3xl" />
 
         <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
           <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
@@ -562,7 +562,7 @@ export default function HomePage() {
               <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#8e6a33]">
                 Insight
               </p>
-              <p className="text-base font-semibold leading-snug text-[#08152f]">
+              <p className="text-base font-semibold leading-snug text-purple-dark">
                 TikTok không ưu tiên sự hoàn hảo, TikTok ưu tiên sự đúng hướng và đều đặn.
               </p>
             </div>
@@ -595,7 +595,7 @@ export default function HomePage() {
               </thead>
               <tbody>
                 {comparison.map((row, i) => (
-                  <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02] transition">
+                  <tr key={i} className="border-t border-white/5 hover:bg-white/2 transition">
                     <td className="p-4 font-medium text-white">{row.feature}</td>
                     <td className="p-4 text-center text-gray-400">{row.freelancer}</td>
                     <td className="p-4 text-center text-gray-400">{row.agency}</td>
@@ -622,9 +622,9 @@ export default function HomePage() {
             {caseStudies.map((cs, i) => (
               <div
                 key={i}
-                className="group rounded-3xl bg-white/[0.03] border border-white/5 hover:border-pink-brand/30 overflow-hidden transition-all duration-300"
+                className="group rounded-3xl bg-white/3 border border-white/5 hover:border-pink-brand/30 overflow-hidden transition-all duration-300"
               >
-                <div className="relative aspect-[9/12] overflow-hidden bg-[#dfe7f5]">
+                <div className="relative aspect-9/12 overflow-hidden bg-[#dfe7f5]">
                   <video
                     className="absolute inset-0 h-full w-full object-cover"
                     src={cs.mediaSrc}
@@ -635,7 +635,7 @@ export default function HomePage() {
                   />
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.32)_100%)]" />
                   <div className="pointer-events-none absolute top-3 left-3">
-                    <span className="rounded-full bg-[#08152f]/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
+                    <span className="rounded-full bg-purple-dark/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
                       {cs.category}
                     </span>
                   </div>
@@ -684,23 +684,23 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
+              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-purple-dark sm:text-4xl lg:text-5xl">
                 Sẵn sàng bùng nổ trên TikTok?
               </h2>
-              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
+              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-normal">
                 Xem bảng giá chi tiết hoặc liên hệ để bắt đầu hành trình xây dựng thương hiệu của bạn.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
+                  className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
                 >
                   <span className="cta-primary-button-text">Đặt lịch tư vấn ngay</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>
                 <Link
                   href="/pricing"
-                  className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
+                  className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-purple-dark transition-all hover:cursor-pointer hover:bg-[#f7f9fc]"
                 >
                   <span className="cta-secondary-button-text">Xem bảng giá</span>
                 </Link>
@@ -732,7 +732,7 @@ export default function HomePage() {
               {[0, 1, 2].map((groupIndex) => (
                 <div key={groupIndex} className="marquee-group">
                   {trustedProfiles.map((profile) => (
-                    <div key={`${groupIndex}-${profile.alt}`} className="flex-shrink-0">
+                    <div key={`${groupIndex}-${profile.alt}`} className="shrink-0">
                       <img
                         src={profile.src}
                         alt={profile.alt}

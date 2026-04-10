@@ -88,14 +88,14 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Liên hệ</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
-                <Phone size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 flex-shrink-0" />
+                <Phone size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 shrink-0" />
                 <div>
                   <p>0906 914 696</p>
                   <p>0935 357 656</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 flex-shrink-0" />
+                <MapPin size={18} strokeWidth={2.2} className="text-pink-brand mt-0.5 shrink-0" />
                 <p>458/64 D. 3 Tháng 2, Quận 10, TP.HCM</p>
               </li>
             </ul>

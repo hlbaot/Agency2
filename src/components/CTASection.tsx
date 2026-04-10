@@ -34,10 +34,10 @@ export default function CTASection({
                 Bắt đầu ngay
               </span>
             </div>
-            <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
+            <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-purple-dark sm:text-4xl lg:text-5xl">
               {title}
             </h2>
-            <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
+            <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-normal">
               {description}
             </p>
             <div className="mb-10 flex flex-wrap justify-center gap-4">
@@ -46,7 +46,7 @@ export default function CTASection({
                   href={primaryButton.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
+                  className="inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
                 >
                   {primaryButton.text}
                   {primaryButton.icon ?? <ChevronRight className="h-5 w-5" />}
@@ -54,7 +54,7 @@ export default function CTASection({
               ) : (
                 <Link
                   href={primaryButton.href}
-                  className="inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
+                  className="inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]"
                 >
                   {primaryButton.text}
                   {primaryButton.icon ?? <ChevronRight className="h-5 w-5" />}

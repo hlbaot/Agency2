@@ -310,7 +310,7 @@ export default function PricingPage() {
               <Sparkles size={15} />
               Năng lực sản xuất
             </span>
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-[#08152f] md:text-6xl">
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-purple-dark md:text-6xl">
               <span>Báo Giá </span>
               <span className="bg-[linear-gradient(90deg,#f0c57a_0%,#dcae5d_45%,#f4cf8c_100%)] bg-clip-text text-transparent">
                 Dịch Vụ
@@ -333,8 +333,8 @@ export default function PricingPage() {
                   onClick={() => setActivePlan(tab.id)}
                   className={`rounded-full px-5 py-3 text-sm font-semibold transition-all sm:px-6 ${
                     activePlan === tab.id
-                      ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-[#08152f] shadow-[0_10px_24px_rgba(201,161,99,0.26)]"
-                      : "text-[#6b7280] hover:bg-[#f5f7fb] hover:text-[#08152f]"
+                      ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-purple-dark shadow-[0_10px_24px_rgba(201,161,99,0.26)]"
+                      : "text-[#6b7280] hover:bg-[#f5f7fb] hover:text-purple-dark"
                   }`}
                 >
                   {tab.label}
@@ -344,7 +344,7 @@ export default function PricingPage() {
           </div>
 
           <div className="mb-8 text-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 border-b border-[#6b7280] pb-1 text-lg text-[#6b7280] transition-all hover:text-[#08152f] hover:border-[#08152f]">
+            <Link href="/contact" className="inline-flex items-center gap-2 border-b border-[#6b7280] pb-1 text-lg text-[#6b7280] transition-all hover:text-purple-dark hover:border-purple-dark">
               Xem báo giá trọn gói
               <ChevronRight size={18} />
             </Link>
@@ -360,7 +360,7 @@ export default function PricingPage() {
             <div
               className={`absolute left-6 top-0 -translate-y-1/2 inline-flex rounded-full bg-white px-6 py-2 text-sm font-bold shadow-sm ${
                 isPremiumPlan
-                  ? "border border-[#d4ae68] text-[#b8862b]"
+                  ? "border border-pink-brand text-[#b8862b]"
                   : "border border-[#9bd7ea] text-[#1497b8]"
               }`}
             >
@@ -517,7 +517,7 @@ export default function PricingPage() {
       </section>
 
       {/* Bundle Packages */}
-      <section className="relative overflow-hidden bg-[#08152f] py-24 text-white">
+      <section className="relative overflow-hidden bg-purple-dark py-24 text-white">
         <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#18366a]/38 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#0f2b57]/40 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -543,14 +543,14 @@ export default function PricingPage() {
                 >
                   <div className="mb-3 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
                     <div className="min-w-0">
-                      <h3 className="min-h-[4.5rem] text-xl font-semibold leading-tight text-[#F8FAFC] md:min-h-[5rem] md:text-[1.35rem]">
+                      <h3 className="min-h-18 text-xl font-semibold leading-tight text-[#F8FAFC] md:min-h-20 md:text-[1.35rem]">
                         {bundle.name}
                       </h3>
                       <p className="mt-3 text-3xl font-black leading-none text-[#F2E3BA] md:text-[2.2rem]">{bundle.price}</p>
                     </div>
                     <div className="flex flex-row items-start gap-2 md:flex-col md:items-end">
                       {bundle.popular ? (
-                        <span className="rounded-full bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-3 py-1 text-[11px] font-semibold text-[#08152f] shadow-[0_6px_16px_rgba(201,161,99,0.2)]">
+                        <span className="rounded-full bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-3 py-1 text-[11px] font-semibold text-purple-dark shadow-[0_6px_16px_rgba(201,161,99,0.2)]">
                           ✦ Phổ biến nhất
                         </span>
                       ) : null}
@@ -564,7 +564,7 @@ export default function PricingPage() {
                         isOpen ? prev.filter((item) => item !== realIndex) : [...prev, realIndex]
                       )
                     }
-                    className="mb-4 inline-flex items-center gap-2 text-sm text-[#d4ae68] hover:cursor-pointer"
+                    className="mb-4 inline-flex items-center gap-2 text-sm text-pink-brand hover:cursor-pointer"
                   >
                     <ChevronDown size={14} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
                     {isOpen ? "Thu gọn" : "Xem chi tiết"}
@@ -578,11 +578,11 @@ export default function PricingPage() {
                       </div>
 
                       <div>
-                        <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d4ae68]">Nội dung</p>
+                        <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-pink-brand">Nội dung</p>
                         <ul className="space-y-1.5">
                           {bundle.content?.map((item) => (
                             <li key={item} className="flex items-start gap-2">
-                              <Check size={14} className="mt-0.5 flex-shrink-0 text-[#d4ae68]" />
+                              <Check size={14} className="mt-0.5 shrink-0 text-pink-brand" />
                               <span className="text-white/82">{item}</span>
                             </li>
                           ))}
@@ -597,7 +597,7 @@ export default function PricingPage() {
                       </div>
 
                       <div>
-                        <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d4ae68]">Chi tiết</p>
+                        <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-pink-brand">Chi tiết</p>
                         <ul className="space-y-1.5 pl-5 text-white/72">
                           {bundle.details?.map((item) => (
                             <li key={item} className="list-disc">
@@ -613,7 +613,7 @@ export default function PricingPage() {
                     href="/contact"
                     className={`mt-4 block rounded-md px-4 py-3 text-center text-sm font-semibold transition-all hover:cursor-pointer ${
                       isOpen
-                        ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-[#08152f] hover:brightness-[1.03] hover:shadow-[0_12px_28px_rgba(201,161,99,0.28)]"
+                        ? "bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] text-purple-dark hover:brightness-[1.03] hover:shadow-[0_12px_28px_rgba(201,161,99,0.28)]"
                         : "bg-white/10 text-white/85 hover:bg-white/15"
                     }`}
                   >
@@ -628,7 +628,7 @@ export default function PricingPage() {
             <div className="mt-8 flex justify-center">
               <button
                 onClick={() => setShowAllBundles((prev) => !prev)}
-                className="inline-flex items-center gap-2 rounded-full border border-[#d4ae68]/45 bg-[#d4ae68]/12 px-6 py-3 text-sm font-semibold text-[#F2E3BA] transition-all hover:cursor-pointer hover:bg-[#d4ae68]/18"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-brand/45 bg-pink-brand/12 px-6 py-3 text-sm font-semibold text-[#F2E3BA] transition-all hover:cursor-pointer hover:bg-pink-brand/18"
               >
                 {showAllBundles ? "Thu gọn" : "Xem thêm"}
                 <ChevronDown size={16} className={`transition-transform ${showAllBundles ? "rotate-180" : ""}`} />
@@ -878,7 +878,7 @@ export default function PricingPage() {
                       ) : null}
                     </div>
                     <span
-                      className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full ${
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${
                         isOpen ? "bg-[#dbeafe] text-[#2563eb]" : "bg-[#eff6ff] text-[#2563eb]"
                       }`}
                     >
@@ -904,18 +904,18 @@ export default function PricingPage() {
                   <span className="cta-badge-text">Bắt đầu ngay</span>
                 </span>
               </div>
-              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
+              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-purple-dark sm:text-4xl lg:text-5xl">
                 Sẵn sàng bắt đầu?
               </h2>
-              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
+              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-normal">
                 Liên hệ ngay để được tư vấn gói dịch vụ phù hợp nhất.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
+                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>
-                <a href="tel:0906914696" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
+                <a href="tel:0906914696" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center gap-3 rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-purple-dark transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
                   <Phone className="cta-secondary-button-icon h-5 w-5" />
                   <span className="cta-secondary-button-text">Gọi ngay</span>
                 </a>

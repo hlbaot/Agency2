@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Play, ChevronDown, Eye, Phone, ChevronRight, Zap } from "lucide-react";
+import { ChevronDown, Eye, Phone, ChevronRight, Zap } from "lucide-react";
 
 const packageFilters = ["Tất cả", "Gói Chuyên Nghiệp", "Gói Cao Cấp"];
 
@@ -205,7 +205,7 @@ export default function PortfolioPage() {
                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
                   selectedCategory === f
                     ? "bg-pink-brand/20 text-pink-brand border border-pink-brand/30"
-                    : "bg-white/[0.03] text-gray-500 hover:text-gray-300 border border-white/5"
+                    : "bg-white/3 text-gray-500 hover:text-gray-300 border border-white/5"
                 }`}
               >
                 {f}
@@ -236,9 +236,9 @@ export default function PortfolioPage() {
                 {visibleProjects.map((project) => (
                     <div
                       key={project.id}
-                      className="group rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 hover:border-pink-brand/30 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+                      className="group rounded-2xl overflow-hidden bg-white/2 border border-white/5 hover:border-pink-brand/30 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
                     >
-                      <div className={`aspect-[9/16] bg-gradient-to-br ${colors[project.colorIdx]} relative overflow-hidden`}>
+                      <div className={`aspect-9/16 bg-linear-to-br ${colors[project.colorIdx]} relative overflow-hidden`}>
                         {project.videoSrc ? (
                           <video
                             className="absolute inset-0 h-full w-full object-cover"
@@ -252,7 +252,7 @@ export default function PortfolioPage() {
                       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.02)_45%,rgba(0,0,0,0.18)_100%)]" />
                       {/* Category tag */}
                       <div className="pointer-events-none absolute top-3 left-3">
-                        <span className="rounded-full bg-[#08152f]/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
+                        <span className="rounded-full bg-purple-dark/88 px-3 py-1 text-xs font-medium text-[#F2E3BA] backdrop-blur-sm">
                           {project.category}
                         </span>
                       </div>
@@ -310,18 +310,18 @@ export default function PortfolioPage() {
                   <span className="cta-badge-text">Bắt đầu ngay</span>
                 </span>
               </div>
-              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-[#08152f] sm:text-4xl lg:text-5xl">
+              <h2 className="cta-title mx-auto mb-6 max-w-3xl text-3xl font-black leading-[1.08] text-purple-dark sm:text-4xl lg:text-5xl">
                 Bạn muốn video như thế này?
               </h2>
-              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-[1.5]">
+              <p className="cta-description mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-[#6b7280] sm:text-xl sm:leading-normal">
                 Hãy để chúng tôi tạo nên những video ấn tượng cho thương hiệu của bạn.
               </p>
               <div className="cta-actions mb-10 flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-[#08152f] shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
+                <Link href="/contact" className="cta-primary-button inline-flex min-w-[220px] items-center justify-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#f6e2a9_0%,#d9a84c_42%,#b8862b_100%)] px-8 py-4 text-lg font-bold text-purple-dark shadow-[0_12px_28px_rgba(201,161,99,0.26)] transition-all hover:cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(201,161,99,0.32)] hover:brightness-[1.03]">
                   <span className="cta-primary-button-text">Nhận tư vấn</span>
                   <ChevronRight className="cta-primary-button-icon h-5 w-5" />
                 </Link>
-                <Link href="/pricing" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-[#08152f] transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
+                <Link href="/pricing" className="cta-secondary-button inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#d7dce5] bg-white px-8 py-4 text-lg font-bold text-purple-dark transition-all hover:cursor-pointer hover:bg-[#f7f9fc]">
                   <span className="cta-secondary-button-text">Xem báo giá</span>
                 </Link>
               </div>
